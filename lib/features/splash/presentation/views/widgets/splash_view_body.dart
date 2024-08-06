@@ -28,17 +28,17 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SvgPicture.asset(
-              Assets.assetsImagesPlant,
+              Assets.imagesPlant,
             ),
           ],
         ),
         SvgPicture.asset(
-          Assets.assetsImagesLogo,
+          Assets.imagesLogo,
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 8.0),
+          padding: const EdgeInsets.only(bottom: 6.0),
           child: SvgPicture.asset(
-            Assets.assetsImagesBottomBubbles,
+            Assets.imagesBottomBubbles,
             fit: BoxFit.fill,
           ),
         ),

@@ -49,6 +49,16 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Skip`
+  String get onboardngSkip {
+    return Intl.message(
+      'Skip',
+      name: 'onboardngSkip',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

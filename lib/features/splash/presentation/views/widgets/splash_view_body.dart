@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruity/core/helper/directional_widget.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/features/on_boarding/presentation/views/on_boarding_view.dart';
 
@@ -14,7 +14,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    excuteNavigation();
+    executeNavigation();
     super.initState();
   }
 
@@ -27,13 +27,18 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SvgPicture.asset(
-              Assets.imagesPlant,
+            DirectionalWidget(
+              mirror: true,
+              child: SvgPicture.asset(
+                Assets.imagesPlant,
+              ),
             ),
           ],
         ),
-        SvgPicture.asset(
-          Assets.imagesLogo,
+        Center(
+          child: SvgPicture.asset(
+            Assets.imagesLogo,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 6.0),
@@ -46,7 +51,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     );
   }
 
-  void excuteNavigation() {
+  void executeNavigation() {
     Future.delayed(
       const Duration(seconds: 3),
       () {

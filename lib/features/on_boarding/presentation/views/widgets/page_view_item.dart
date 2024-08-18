@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruity/core/helper/directional_widget.dart';
+import 'package:fruity/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -21,8 +23,14 @@ class PageViewItem extends StatelessWidget {
           width: double.infinity,
           child: Stack(
             children: [
-              const Positioned(
-                child: Text("تخط"),
+              Positioned(
+                child: DirectionalWidget(
+                  padding: const EdgeInsets.only(left: 14, top: 28),
+                  child: Text(
+                    S.of(context).onboardngSkip,
+                    style: const TextStyle(fontSize: 18, color: Colors.black),
+                  ),
+                ),
               ),
               Positioned.fill(
                 top: 0,

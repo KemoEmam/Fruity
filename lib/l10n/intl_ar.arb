@@ -1,4 +1,9 @@
 {
-    "onboardngSkip": "تخط"
-
+"onboardngSkip": "تخط",
+"onboardng1Title1": " مرحبا بك في",
+"onboardng1Title2": "HUB",
+"onboardng1Title3": "Fruit",
+"onboardng1Subtitle": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازه واحصل على أفضل العروض والجودة العالية",
+"onboardng2Title": "ابحث وتسوق",
+"onboardng2Subtitle": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية."
 }

@@ -59,6 +59,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to`
+  String get onboardng1Title1 {
+    return Intl.message(
+      'Welcome to',
+      name: 'onboardng1Title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `HUB`
+  String get onboardng1Title2 {
+    return Intl.message(
+      'HUB',
+      name: 'onboardng1Title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fruit`
+  String get onboardng1Title3 {
+    return Intl.message(
+      'Fruit',
+      name: 'onboardng1Title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality`
+  String get onboardng1Subtitle {
+    return Intl.message(
+      'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality',
+      name: 'onboardng1Subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search and Shop`
+  String get onboardng2Title {
+    return Intl.message(
+      'Search and Shop',
+      name: 'onboardng2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.`
+  String get onboardng2Subtitle {
+    return Intl.message(
+      'We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.',
+      name: 'onboardng2Subtitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

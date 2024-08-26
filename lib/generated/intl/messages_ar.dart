@@ -22,15 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "onboardng1Subtitle": MessageLookupByLibrary.simpleMessage(
+        "onboarding1Subtitle": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازه واحصل على أفضل العروض والجودة العالية"),
-        "onboardng1Title1":
+        "onboarding1Title1":
             MessageLookupByLibrary.simpleMessage(" مرحبا بك في"),
-        "onboardng1Title2": MessageLookupByLibrary.simpleMessage("HUB"),
-        "onboardng1Title3": MessageLookupByLibrary.simpleMessage("Fruit"),
-        "onboardng2Subtitle": MessageLookupByLibrary.simpleMessage(
+        "onboarding1Title2": MessageLookupByLibrary.simpleMessage("HUB"),
+        "onboarding1Title3": MessageLookupByLibrary.simpleMessage("Fruit"),
+        "onboarding2Subtitle": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية."),
-        "onboardng2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
-        "onboardngSkip": MessageLookupByLibrary.simpleMessage("تخط")
+        "onboarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "onboardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+        "onboardingSkip": MessageLookupByLibrary.simpleMessage("تخط")
       };
 }

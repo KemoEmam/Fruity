@@ -1,9 +1,11 @@
 {
-    "onboardngSkip": "Skip",
-    "onboardng1Title1": "Welcome to",
-    "onboardng1Title2": "HUB",
-    "onboardng1Title3": "Fruit",
-    "onboardng1Subtitle": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality",
-    "onboardng2Title": "Search and Shop",
-    "onboardng2Subtitle": "We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit."
+    "onboardingSkip": "Skip",
+    "onboarding1Title1": "Welcome to",
+    "onboarding1Title2": "HUB",
+    "onboarding1Title3": "Fruit",
+    "onboarding1Subtitle": "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality",
+    "onboarding2Title": "Search and Shop",
+    "onboarding2Subtitle": "We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.",
+    "onboardingButton": "Get Started"
+
     }

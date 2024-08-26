@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruity/core/helper/directional_widget.dart';
+import 'package:fruity/core/widgets/directional_widget.dart';
 import 'package:fruity/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -12,13 +12,14 @@ class PageViewItem extends StatelessWidget {
     required this.subtitle,
     required this.title,
     this.positioned,
+    required this.isVisible,
   });
 
   final String backgroundImage, image;
   final String subtitle;
   final Widget title;
   final double? positioned;
-
+  final bool isVisible;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,12 +29,15 @@ class PageViewItem extends StatelessWidget {
           width: double.infinity,
           child: Stack(
             children: [
-              Positioned(
-                child: DirectionalWidget(
-                  padding: const EdgeInsets.only(left: 14, top: 28),
-                  child: Text(
-                    S.of(context).onboardngSkip,
-                    style: const TextStyle(fontSize: 16, color: Colors.black),
+              Visibility(
+                visible: isVisible,
+                child: Positioned(
+                  child: DirectionalWidget(
+                    padding: const EdgeInsets.only(left: 14, top: 28),
+                    child: Text(
+                      S.of(context).onboardingSkip,
+                      style: const TextStyle(fontSize: 14, color: Colors.black),
+                    ),
                   ),
                 ),
               ),

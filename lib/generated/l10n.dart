@@ -51,70 +51,80 @@ class S {
   }
 
   /// `Skip`
-  String get onboardngSkip {
+  String get onboardingSkip {
     return Intl.message(
       'Skip',
-      name: 'onboardngSkip',
+      name: 'onboardingSkip',
       desc: '',
       args: [],
     );
   }
 
   /// `Welcome to`
-  String get onboardng1Title1 {
+  String get onboarding1Title1 {
     return Intl.message(
       'Welcome to',
-      name: 'onboardng1Title1',
+      name: 'onboarding1Title1',
       desc: '',
       args: [],
     );
   }
 
   /// `HUB`
-  String get onboardng1Title2 {
+  String get onboarding1Title2 {
     return Intl.message(
       'HUB',
-      name: 'onboardng1Title2',
+      name: 'onboarding1Title2',
       desc: '',
       args: [],
     );
   }
 
   /// `Fruit`
-  String get onboardng1Title3 {
+  String get onboarding1Title3 {
     return Intl.message(
       'Fruit',
-      name: 'onboardng1Title3',
+      name: 'onboarding1Title3',
       desc: '',
       args: [],
     );
   }
 
   /// `Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality`
-  String get onboardng1Subtitle {
+  String get onboarding1Subtitle {
     return Intl.message(
       'Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality',
-      name: 'onboardng1Subtitle',
+      name: 'onboarding1Subtitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Search and Shop`
-  String get onboardng2Title {
+  String get onboarding2Title {
     return Intl.message(
       'Search and Shop',
-      name: 'onboardng2Title',
+      name: 'onboarding2Title',
       desc: '',
       args: [],
     );
   }
 
   /// `We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.`
-  String get onboardng2Subtitle {
+  String get onboarding2Subtitle {
     return Intl.message(
       'We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.',
-      name: 'onboardng2Subtitle',
+      name: 'onboarding2Subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get onboardingButton {
+    return Intl.message(
+      'Get Started',
+      name: 'onboardingButton',
       desc: '',
       args: [],
     );

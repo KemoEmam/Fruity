@@ -36,7 +36,6 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
-  smooth_page_indicator: ^1.2.0+3
   kemo_package:
     git:
       url: https://github.com/KemoEmam/kemo_package.git

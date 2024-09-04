@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruity/core/widgets/directional_widget.dart';
+import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/features/on_boarding/presentation/views/on_boarding_view.dart';
 

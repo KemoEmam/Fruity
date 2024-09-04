@@ -16,7 +16,7 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible:
               (pageController.hasClients ? pageController.page!.round() : 0) ==
                   0,
-          positioned: 18,
+          positionedRight: 18,
           backgroundImage: Assets.imagesOnBoarding1Background,
           image: Assets.imagesOnBoarding1Fruit,
           title: Row(
@@ -33,7 +33,7 @@ class OnBoardingPageView extends StatelessWidget {
           isVisible:
               (pageController.hasClients ? pageController.page!.round() : 0) ==
                   0,
-          positioned: -4,
+          positionedRight: -4,
           backgroundImage: Assets.imagesOnBoarding2Background,
           image: Assets.imagesOnBoarding2Fruit,
           title: Row(

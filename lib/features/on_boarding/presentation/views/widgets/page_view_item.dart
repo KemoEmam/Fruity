@@ -1,7 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruity/core/widgets/directional_widget.dart';
+import 'package:fruity/core/components/custom_text_button.dart';
+import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -11,14 +12,14 @@ class PageViewItem extends StatelessWidget {
     required this.image,
     required this.subtitle,
     required this.title,
-    this.positioned,
+    this.positionedRight,
     required this.isVisible,
   });
 
   final String backgroundImage, image;
   final String subtitle;
   final Widget title;
-  final double? positioned;
+  final double? positionedRight;
   final bool isVisible;
   @override
   Widget build(BuildContext context) {
@@ -31,13 +32,11 @@ class PageViewItem extends StatelessWidget {
             children: [
               Visibility(
                 visible: isVisible,
-                child: Positioned(
-                  child: DirectionalWidget(
-                    padding: const EdgeInsets.only(left: 14, top: 28),
-                    child: Text(
-                      S.of(context).onboardingSkip,
-                      style: const TextStyle(fontSize: 14, color: Colors.black),
-                    ),
+                child: DirectionalWidget(
+                  padding: const EdgeInsets.only(top: 22, left: 6),
+                  child: CustomTextButton(
+                    text: S.of(context).onboardingSkip,
+                    onPressed: () {},
                   ),
                 ),
               ),
@@ -50,7 +49,7 @@ class PageViewItem extends StatelessWidget {
               Positioned(
                 bottom: 0,
                 left: 0,
-                right: positioned,
+                right: positionedRight,
                 child: SvgPicture.asset(image),
               ),
             ],

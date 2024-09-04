@@ -197,7 +197,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "5a29acddf1940167e0cc55b1bc644e0257438941"
+      resolved-ref: f99a2886d2a9cb47bdf6270bce390fbe25453d79
       url: "https://github.com/KemoEmam/kemo_package.git"
     source: git
     version: "0.0.1"
@@ -286,14 +286,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  smooth_page_indicator:
-    dependency: "direct main"
-    description:
-      name: smooth_page_indicator
-      sha256: "3b28b0c545fa67ed9e5997d9f9720d486f54c0c607e056a1094544e36934dff3"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0+3"
   source_span:
     dependency: transitive
     description:

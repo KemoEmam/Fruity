@@ -4,19 +4,21 @@ import 'package:fruity/core/utils/app_colors.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
-  final Color color;
+  final Color buttonColor;
   final Color textColor;
   final double borderRadius;
-  final EdgeInsets padding;
+  final TextStyle? textStyle;
+  final double? fontSize;
 
   const CustomButton({
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = AppColors.primaryColor,
+    this.buttonColor = AppColors.primaryColor,
     this.textColor = Colors.white,
     this.borderRadius = 16,
-    this.padding = const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+    this.textStyle,
+    this.fontSize,
   });
 
   @override
@@ -26,20 +28,21 @@ class CustomButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          textStyle: textStyle ?? TextStyle(fontSize: fontSize),
           foregroundColor: textColor,
-          backgroundColor: color,
+          backgroundColor: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
-          padding: padding,
         ),
         onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyle(
-            color: textColor,
-            fontWeight: FontWeight.bold,
-          ),
+          style: textStyle?.copyWith(color: textColor) ??
+              TextStyle(
+                  fontSize: fontSize ?? 16,
+                  color: textColor,
+                  fontWeight: FontWeight.bold),
         ),
       ),
     );

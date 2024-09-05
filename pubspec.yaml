@@ -71,19 +71,37 @@ flutter:
   fonts:
     - family: Cairo
       fonts:
-        - asset: fonts/Cairo-Regular.ttf
-        - asset: fonts/Cairo-SemiBold.ttf
-        - asset: fonts/Cairo-Bold.ttf
-    - family: SF Pro Text
-      fonts:
-        - asset: fonts/SFProText-Regular.ttf
-        - asset: fonts/SFProText-SemiBold.ttf
-    - family: Poppins
-      fonts:
-        - asset: fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Cairo-Regular.ttf
+        - asset: assets/fonts/Cairo-Bold.ttf
+        - asset: assets/fonts/Cairo-SemiBold.ttf
+        - asset: assets/fonts/Cairo-Medium.ttf
     - family: DM Sans
       fonts:
-        - asset: fonts/DMSans-Bold.ttf
+        - asset: assets/fonts/DM_Sans-Bold.ttf
+    - family: Droid Arabic Kufi
+      fonts:
+        - asset: assets/fonts/DroidArabicKufi-Bold.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+    - family: Product Sans
+      fonts:
+        - asset: assets/fonts/ProductSans-Bold.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+    - family: SF Pro Display
+      fonts:
+        - asset: assets/fonts/SF-Pro-Display-Regular.ttf
+    - family: SF Pro Text
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Regular.ttf
+        - asset: assets/fonts/SF-Pro-Text-SemiBold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

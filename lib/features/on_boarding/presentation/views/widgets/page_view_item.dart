@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/core/components/custom_text_button.dart';
 import 'package:fruity/core/components/directional_widget.dart';
+import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -14,6 +15,7 @@ class PageViewItem extends StatelessWidget {
     required this.title,
     this.positionedRight,
     required this.isVisible,
+    required this.textStyle,
   });
 
   final String backgroundImage, image;
@@ -21,6 +23,7 @@ class PageViewItem extends StatelessWidget {
   final Widget title;
   final double? positionedRight;
   final bool isVisible;
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,6 +39,9 @@ class PageViewItem extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 22, left: 6),
                   child: CustomTextButton(
                     text: S.of(context).onboardingSkip,
+                    textStyle: AppTextStyles.cairoRegular13.copyWith(
+                      color: const Color(0xFF949D9E),
+                    ),
                     onPressed: () {},
                   ),
                 ),
@@ -59,10 +65,11 @@ class PageViewItem extends StatelessWidget {
         title,
         const SizedBox(height: 24),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 19),
           child: AutoSizeText(
             textAlign: TextAlign.center,
             subtitle,
+            style: textStyle,
             minFontSize: 12,
           ),
         ),

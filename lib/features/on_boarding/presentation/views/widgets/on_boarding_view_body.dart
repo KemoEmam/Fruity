@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruity/constants.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/components/custom_button.dart';
+import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruity/generated/l10n.dart';
 
@@ -64,6 +65,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
             child: CustomButton(
               text: S.current.onboardingButton,
+              textStyle: AppTextStyles.cairoBold16,
               onPressed: () {},
             ),
           ),

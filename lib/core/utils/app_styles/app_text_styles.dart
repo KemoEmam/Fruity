@@ -1,109 +1,123 @@
 import 'package:flutter/material.dart';
 
 abstract class AppTextStyles {
-  // Cairo Font Styles
-  static const TextStyle cairoRegular11 = TextStyle(
-    fontFamily: 'Cairo',
-    fontWeight: FontWeight.w400,
-    fontSize: 11.0,
-  );
-
-  static const TextStyle cairoSemiBold11 = TextStyle(
-    fontFamily: 'Cairo',
-    fontWeight: FontWeight.w600,
-    fontSize: 11.0,
-  );
-
   static const TextStyle cairoRegular13 = TextStyle(
     fontFamily: 'Cairo',
     fontWeight: FontWeight.w400,
-    fontSize: 13.0,
-  );
-
-  static const TextStyle cairoSemiBold13 = TextStyle(
-    fontFamily: 'Cairo',
-    fontWeight: FontWeight.w600,
-    fontSize: 13.0,
+    fontSize: 13,
   );
 
   static const TextStyle cairoBold13 = TextStyle(
     fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
-    fontSize: 13.0,
-  );
-
-  static const TextStyle cairoRegular16 = TextStyle(
-    fontFamily: 'Cairo',
-    fontWeight: FontWeight.w400,
-    fontSize: 16.0,
-  );
-
-  static const TextStyle cairoSemiBold16 = TextStyle(
-    fontFamily: 'Cairo',
-    fontWeight: FontWeight.w600,
-    fontSize: 16.0,
+    fontSize: 13,
   );
 
   static const TextStyle cairoBold16 = TextStyle(
     fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
-    fontSize: 16.0,
+    fontSize: 16,
   );
 
   static const TextStyle cairoBold19 = TextStyle(
     fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
-    fontSize: 19.0,
+    fontSize: 19,
+  );
+
+  static const TextStyle cairoBold22 = TextStyle(
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w700,
+    fontSize: 22,
+  );
+
+  static const TextStyle cairoBold22_5 = TextStyle(
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w700,
+    fontSize: 22.5,
   );
 
   static const TextStyle cairoBold23 = TextStyle(
     fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
-    fontSize: 23.0,
+    fontSize: 23,
   );
 
-  // SF Pro Text Font Styles
-  static const TextStyle sfProTextRegular13 = TextStyle(
-    fontFamily: 'SF Pro Text',
-    fontWeight: FontWeight.w400,
-    fontSize: 13.0,
-  );
-
-  static const TextStyle sfProTextRegular14 = TextStyle(
-    fontFamily: 'SF Pro Text',
-    fontWeight: FontWeight.w400,
-    fontSize: 14.0,
-  );
-
-  static const TextStyle sfProTextSemiBold14 = TextStyle(
-    fontFamily: 'SF Pro Text',
+  static const TextStyle cairoSemiBold13 = TextStyle(
+    fontFamily: 'Cairo',
     fontWeight: FontWeight.w600,
-    fontSize: 14.0,
+    fontSize: 13,
+  );
+
+  static const TextStyle cairoSemiBold16 = TextStyle(
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+  );
+
+  static const TextStyle dmSansBold16 = TextStyle(
+    fontFamily: 'DM Sans',
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+  );
+
+  static const TextStyle droidArabicKufiBold32 = TextStyle(
+    fontFamily: 'Droid Arabic Kufi',
+    fontWeight: FontWeight.w700,
+    fontSize: 32,
+  );
+
+  static const TextStyle interMedium16 = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
+  static const TextStyle interRegular13 = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+  );
+
+  static const TextStyle poppinsMedium16 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
+  static const TextStyle productSansBold32 = TextStyle(
+    fontFamily: 'Product Sans',
+    fontWeight: FontWeight.w700,
+    fontSize: 32,
+  );
+
+  static const TextStyle robotoRegular16 = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+  );
+
+  static const TextStyle robotoBold19 = TextStyle(
+    fontFamily: 'Roboto',
+    fontWeight: FontWeight.w700,
+    fontSize: 19,
+  );
+
+  static const TextStyle sfProDisplayRegular16 = TextStyle(
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
   );
 
   static const TextStyle sfProTextRegular16 = TextStyle(
     fontFamily: 'SF Pro Text',
     fontWeight: FontWeight.w400,
-    fontSize: 16.0,
+    fontSize: 16,
   );
 
-  static const TextStyle sfProTextRegular22_5 = TextStyle(
+  static const TextStyle sfProTextSemiBold22 = TextStyle(
     fontFamily: 'SF Pro Text',
-    fontWeight: FontWeight.w400,
-    fontSize: 22.5,
-  );
-
-  // Poppins Font Styles
-  static const TextStyle poppinsMedium15 = TextStyle(
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-    fontSize: 15.0,
-  );
-
-  // DM Sans Font Styles
-  static const TextStyle dmSansBold28 = TextStyle(
-    fontFamily: 'DM Sans',
-    fontWeight: FontWeight.w700,
-    fontSize: 28.0,
+    fontWeight: FontWeight.w600,
+    fontSize: 22,
   );
 }

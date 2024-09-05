@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruity/core/utils/app_images.dart';
+import 'package:fruity/core/utils/app_styles/app_colors.dart';
+import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/on_boarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruity/generated/l10n.dart';
 
@@ -22,12 +24,30 @@ class OnBoardingPageView extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(S.of(context).onboarding1Title1),
-              Text(S.of(context).onboarding1Title2),
-              Text(S.of(context).onboarding1Title3),
+              Text(
+                S.of(context).onboarding1Title1,
+                style: AppTextStyles.cairoBold23.copyWith(
+                  color: const Color(0xFF0C0D0D),
+                ),
+              ),
+              const SizedBox(width: 5),
+              Text(
+                S.of(context).onboarding1Title2,
+                style: AppTextStyles.cairoBold23
+                    .copyWith(color: AppColors.secondaryColor),
+              ),
+              Text(
+                S.of(context).onboarding1Title3,
+                style: AppTextStyles.cairoBold23.copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
             ],
           ),
           subtitle: S.of(context).onboarding1Subtitle,
+          textStyle: AppTextStyles.cairoSemiBold13.copyWith(
+            color: const Color(0xFF4E5556),
+          ),
         ),
         PageViewItem(
           isVisible:
@@ -40,19 +60,18 @@ class OnBoardingPageView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                S.of(context).onboarding2Title,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Color(0xFF0C0D0D),
-                  fontSize: 23,
-                  fontFamily: 'Cairo',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
+                S.of(context).onboarding2Title,
+                style: AppTextStyles.cairoBold23.copyWith(
+                  color: const Color(0xFF0C0D0D),
                 ),
               ),
             ],
           ),
           subtitle: S.of(context).onboarding2Subtitle,
+          textStyle: AppTextStyles.cairoSemiBold13.copyWith(
+            color: const Color(0xFF4E5556),
+          ),
         ),
       ],
     );

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/core/components/custom_text_button.dart';
 import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
+import 'package:fruity/features/auth/login_view.dart';
 import 'package:fruity/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -33,19 +34,6 @@ class PageViewItem extends StatelessWidget {
           width: double.infinity,
           child: Stack(
             children: [
-              Visibility(
-                visible: isVisible,
-                child: DirectionalWidget(
-                  padding: const EdgeInsets.only(top: 22, left: 6),
-                  child: CustomTextButton(
-                    text: S.of(context).onboardingSkip,
-                    textStyle: AppTextStyles.cairoRegular13.copyWith(
-                      color: const Color(0xFF949D9E),
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-              ),
               Positioned.fill(
                 top: 0,
                 left: 0,
@@ -57,6 +45,21 @@ class PageViewItem extends StatelessWidget {
                 left: 0,
                 right: positionedRight,
                 child: SvgPicture.asset(image),
+              ),
+              Visibility(
+                visible: isVisible,
+                child: DirectionalWidget(
+                  padding: const EdgeInsets.only(top: 22, left: 6),
+                  child: CustomTextButton(
+                    text: S.of(context).onboardingSkip,
+                    textStyle: AppTextStyles.cairoRegular13,
+                    textColor: const Color(0xFF949D9E),
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushReplacementNamed(LoginView.routeName);
+                    },
+                  ),
+                ),
               ),
             ],
           ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruity/core/helper/functions/on_generate_route.dart';
-import 'package:fruity/core/services/shared_prefrences.dart';
+import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
 import 'package:fruity/generated/l10n.dart';
 
 void main() async {
-  await SharedPrefrencesService.init();
+  await SharedPrefsService.init();
   runApp(const Fruity());
 }
 

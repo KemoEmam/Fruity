@@ -1,11 +1,14 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/custom_text_button.dart';
 import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/auth/login_view.dart';
 import 'package:fruity/generated/l10n.dart';
+
+import '../../../../../core/services/shared_prefs_service.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -55,6 +58,7 @@ class PageViewItem extends StatelessWidget {
                     textStyle: AppTextStyles.cairoRegular13,
                     textColor: const Color(0xFF949D9E),
                     onPressed: () {
+                      SharedPrefsService.setBool(kIsOnboardingSeen, true);
                       Navigator.of(context)
                           .pushReplacementNamed(LoginView.routeName);
                     },

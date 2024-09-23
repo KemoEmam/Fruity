@@ -5,7 +5,6 @@ import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/features/auth/login_view.dart';
-import 'package:fruity/features/on_boarding/presentation/views/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -17,7 +16,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    executeNavigation(context);
+    executeNavigation();
     super.initState();
   }
 
@@ -53,20 +52,17 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     );
   }
 
-  void executeNavigation(BuildContext context) {
+  void executeNavigation() {
     bool isOnBoardingSeen = SharedPrefsService.getBool(kIsOnboardingSeen);
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        WidgetsBinding.instance.addPostFrameCallback(
-          (_) {
-            if (isOnBoardingSeen) {
-              Navigator.pushReplacementNamed(context, LoginView.routeName);
-            } else {
-              Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
-            }
-          },
-        );
+        if (!mounted) return;
+        if (isOnBoardingSeen) {
+          Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+        } else {
+          Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+        }
       },
     );
   }

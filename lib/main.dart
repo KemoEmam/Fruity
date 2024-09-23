@@ -6,6 +6,7 @@ import 'package:fruity/features/splash/presentation/views/splash_view.dart';
 import 'package:fruity/generated/l10n.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefsService.init();
   runApp(const Fruity());
 }

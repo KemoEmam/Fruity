@@ -178,7 +178,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: fc40101e5e6b7b1fe057b9bf221d2ecc6f414f2e
+      resolved-ref: "8c788b1aabff28550cd746748c9e35fa5d3dd302"
       url: "https://github.com/KemoEmam/ForbiddenPack.git"
     source: git
     version: "0.0.1"

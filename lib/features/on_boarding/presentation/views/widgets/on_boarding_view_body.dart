@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruity/constants.dart';
+import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/components/custom_button.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
@@ -68,6 +69,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               text: S.current.onboardingButton,
               textStyle: AppTextStyles.cairoBold16,
               onPressed: () {
+                SharedPrefsService.setBool(kIsOnboardingSeen, true);
                 Navigator.of(context).pushReplacementNamed(LoginView.routeName);
               },
             ),

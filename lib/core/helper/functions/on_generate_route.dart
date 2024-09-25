@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fruity/features/auth/login_view.dart';
+import 'package:fruity/features/auth/presentation/views/login_view.dart';
 import 'package:fruity/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
 

@@ -7,5 +7,14 @@
 "onboarding2Title": "Search and Shop",
 "onboarding2Subtitle": "We bring you the best handpicked fruits. Check out the details, photos and reviews to make sure you choose the perfect fruit.",
 "onboardingButton": "Get Started",
-"loginAppBar": "Login"
+"loginAppBar": "Login",
+"loginEmail": "Email",
+"loginPassword": "Password",
+"loginForgotPassword": "Forgot Password?",
+"loginCreateAccount1": "Don't have an account?",
+"loginCreateAccount2": "Create Account",
+"loginOr": "Or",
+"loginSignGoogle": "Sign up with Google",
+"loginSignApple": "Sign up with Apple",
+"loginSignFacebook": "Sign up with Facebook"
 }

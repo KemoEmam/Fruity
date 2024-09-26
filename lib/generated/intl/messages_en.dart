@@ -23,6 +23,21 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "loginAppBar": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginCreateAccount1":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "loginCreateAccount2":
+            MessageLookupByLibrary.simpleMessage("Create Account"),
+        "loginEmail": MessageLookupByLibrary.simpleMessage("Email"),
+        "loginForgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "loginOr": MessageLookupByLibrary.simpleMessage("Or"),
+        "loginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "loginSignApple":
+            MessageLookupByLibrary.simpleMessage("Sign up with Apple"),
+        "loginSignFacebook":
+            MessageLookupByLibrary.simpleMessage("Sign up with Facebook"),
+        "loginSignGoogle":
+            MessageLookupByLibrary.simpleMessage("Sign up with Google"),
         "onboarding1Subtitle": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality"),
         "onboarding1Title1": MessageLookupByLibrary.simpleMessage("Welcome to"),

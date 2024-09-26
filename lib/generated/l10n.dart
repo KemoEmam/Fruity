@@ -139,6 +139,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Email`
+  String get loginEmail {
+    return Intl.message(
+      'Email',
+      name: 'loginEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get loginPassword {
+    return Intl.message(
+      'Password',
+      name: 'loginPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get loginForgotPassword {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'loginForgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get loginCreateAccount1 {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'loginCreateAccount1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Account`
+  String get loginCreateAccount2 {
+    return Intl.message(
+      'Create Account',
+      name: 'loginCreateAccount2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get loginOr {
+    return Intl.message(
+      'Or',
+      name: 'loginOr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up with Google`
+  String get loginSignGoogle {
+    return Intl.message(
+      'Sign up with Google',
+      name: 'loginSignGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up with Apple`
+  String get loginSignApple {
+    return Intl.message(
+      'Sign up with Apple',
+      name: 'loginSignApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up with Facebook`
+  String get loginSignFacebook {
+    return Intl.message(
+      'Sign up with Facebook',
+      name: 'loginSignFacebook',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

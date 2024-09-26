@@ -7,5 +7,14 @@
 "onboarding2Title": "ابحث وتسوق",
 "onboarding2Subtitle": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية.",
 "onboardingButton": "ابدأ الان",
-"loginAppBar": "تسجيل الدخول"
+"loginAppBar": "تسجيل الدخول",
+"loginEmail": "البريد الالكتروني",
+"loginPassword": "كلمة المرور",
+"loginForgotPassword": "نسيت كلمة المرور؟",
+"loginCreateAccount1": "لا تمتلك حساب؟",
+"loginCreateAccount2": "قم بانشاء حساب",
+"loginOr": "أو",
+"loginSignGoogle": "تسجيل بواسطة جوجل",
+"loginSignApple": "تسجيل بواسطةأبل",
+"loginSignFacebook": "تسجيل بواسطة فيسبوك"
 }

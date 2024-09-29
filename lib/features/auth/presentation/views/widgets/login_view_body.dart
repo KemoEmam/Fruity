@@ -6,7 +6,8 @@ import 'package:fruity/core/components/custom_text_form_field.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
-import 'package:fruity/features/auth/presentation/views/widgets/dont_have_account_widget.dart';
+import 'package:fruity/features/auth/presentation/views/signup_view.dart';
+import 'package:fruity/features/auth/presentation/views/widgets/account_action_text.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:fruity/generated/l10n.dart';
@@ -51,7 +52,13 @@ class LoginViewBody extends StatelessWidget {
               onPressed: () {},
             ),
             const SizedBox(height: 33),
-            const DontHaveAccountWidget(),
+            AccountActionText(
+              textBeforeAction: S.of(context).loginCreateAccount1,
+              actionText: S.of(context).loginCreateAccount2,
+              onTap: () {
+                Navigator.pushNamed(context, SignupView.routeName);
+              },
+            ),
             const SizedBox(height: 33),
             const OrDivider(),
             const SizedBox(height: 21),

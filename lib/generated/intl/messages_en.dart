@@ -61,7 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "signupPassword": MessageLookupByLibrary.simpleMessage("Password"),
         "signupTerms1": MessageLookupByLibrary.simpleMessage(
-            "By creating an account, you agree to the"),
+            "By creating an account, you agree to the "),
         "signupTerms2":
             MessageLookupByLibrary.simpleMessage("Our Terms and Conditions")
       };

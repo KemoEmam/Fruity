@@ -280,10 +280,10 @@ class S {
     );
   }
 
-  /// `By creating an account, you agree to the`
+  /// `By creating an account, you agree to the `
   String get signupTerms1 {
     return Intl.message(
-      'By creating an account, you agree to the',
+      'By creating an account, you agree to the ',
       name: 'signupTerms1',
       desc: '',
       args: [],

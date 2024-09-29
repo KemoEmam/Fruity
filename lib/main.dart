@@ -30,7 +30,7 @@ class Fruity extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale('ar'),
+      locale: const Locale('en'),
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,

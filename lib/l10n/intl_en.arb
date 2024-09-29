@@ -22,7 +22,7 @@
 "signupEmail": "Email",
 "signupPassword": "Password",
 "signupError": "There was an error creating the account. Please try again.",
-"signupTerms1": "By creating an account, you agree to the",
+"signupTerms1": "By creating an account, you agree to the ",
 "signupTerms2": "Our Terms and Conditions",
 "signupButton": "Create a New Account",
 "signupHaveAccount1": "Already have an account?",

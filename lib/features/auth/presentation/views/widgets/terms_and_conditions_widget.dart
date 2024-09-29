@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
+// Assuming you have localization in your app
+import 'package:fruity/generated/l10n.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  final String labelFirstPart;
-  final String labelSecondPart;
+  final String? labelFirstPart;
+  final String? labelSecondPart;
   final TextStyle? firstPartStyle;
   final TextStyle? secondPartStyle;
   final bool initialValue;
@@ -18,8 +20,8 @@ class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({
     super.key,
     required this.onChanged,
-    this.labelFirstPart = 'من خلال إنشاء حساب ، فإنك توافق علي ',
-    this.labelSecondPart = 'الشروط والأحكام الخاصة بنا',
+    this.labelFirstPart, // Allow nullable, since default will come from S.of(context)
+    this.labelSecondPart, // Allow nullable
     this.firstPartStyle,
     this.secondPartStyle,
     this.initialValue = false,
@@ -52,6 +54,11 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
   @override
   Widget build(BuildContext context) {
     bool isRTL = Directionality.of(context) == TextDirection.rtl;
+
+    // Use provided values or default to localized values
+    String labelFirstPart = widget.labelFirstPart ?? S.of(context).signupTerms1;
+    String labelSecondPart =
+        widget.labelSecondPart ?? S.of(context).signupTerms2;
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,14 +100,16 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: widget.labelFirstPart,
+                      text:
+                          labelFirstPart, // Dynamically use passed or default value
                       style: widget.firstPartStyle ??
                           AppTextStyles.cairoBold13.copyWith(
                             color: const Color(0xff949D9E),
                           ),
                     ),
                     TextSpan(
-                      text: widget.labelSecondPart,
+                      text:
+                          labelSecondPart, // Dynamically use passed or default value
                       style: widget.secondPartStyle ??
                           AppTextStyles.cairoBold13.copyWith(
                             color: AppColors.primaryLightColor,

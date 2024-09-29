@@ -229,6 +229,106 @@ class S {
       args: [],
     );
   }
+
+  /// `New Account`
+  String get signupAppBar {
+    return Intl.message(
+      'New Account',
+      name: 'signupAppBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get signupName {
+    return Intl.message(
+      'Full Name',
+      name: 'signupName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get signupEmail {
+    return Intl.message(
+      'Email',
+      name: 'signupEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get signupPassword {
+    return Intl.message(
+      'Password',
+      name: 'signupPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There was an error creating the account. Please try again.`
+  String get signupError {
+    return Intl.message(
+      'There was an error creating the account. Please try again.',
+      name: 'signupError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to the`
+  String get signupTerms1 {
+    return Intl.message(
+      'By creating an account, you agree to the',
+      name: 'signupTerms1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our Terms and Conditions`
+  String get signupTerms2 {
+    return Intl.message(
+      'Our Terms and Conditions',
+      name: 'signupTerms2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a New Account`
+  String get signupButton {
+    return Intl.message(
+      'Create a New Account',
+      name: 'signupButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get signupHaveAccount1 {
+    return Intl.message(
+      'Already have an account?',
+      name: 'signupHaveAccount1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get signupHaveAccount2 {
+    return Intl.message(
+      'Sign in',
+      name: 'signupHaveAccount2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

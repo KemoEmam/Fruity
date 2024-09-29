@@ -48,6 +48,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding2Title":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
         "onboardingButton": MessageLookupByLibrary.simpleMessage("Get Started"),
-        "onboardingSkip": MessageLookupByLibrary.simpleMessage("Skip")
+        "onboardingSkip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "signupAppBar": MessageLookupByLibrary.simpleMessage("New Account"),
+        "signupButton":
+            MessageLookupByLibrary.simpleMessage("Create a New Account"),
+        "signupEmail": MessageLookupByLibrary.simpleMessage("Email"),
+        "signupError": MessageLookupByLibrary.simpleMessage(
+            "There was an error creating the account. Please try again."),
+        "signupHaveAccount1":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "signupHaveAccount2": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "signupName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "signupPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "signupTerms1": MessageLookupByLibrary.simpleMessage(
+            "By creating an account, you agree to the"),
+        "signupTerms2":
+            MessageLookupByLibrary.simpleMessage("Our Terms and Conditions")
       };
 }

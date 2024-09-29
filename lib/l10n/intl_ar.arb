@@ -16,5 +16,15 @@
 "loginOr": "أو",
 "loginSignGoogle": "تسجيل بواسطة جوجل",
 "loginSignApple": "تسجيل بواسطةأبل",
-"loginSignFacebook": "تسجيل بواسطة فيسبوك"
+"loginSignFacebook": "تسجيل بواسطة فيسبوك",
+"signupAppBar": "حساب جديد",
+"signupName": "الاسم كامل",
+"signupEmail": "البريد الالكتروني",
+"signupPassword": "كلمة المرور",
+"signupError": "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى.",
+"signupTerms1": " من خلال انشاء حساب، فانك توافق على ",
+"signupTerms2": "الشروط والاحكام الخاصة بنا",
+"signupButton": "انشاء حساب جديد",
+"signupHaveAccount1": "تمتلك حساب بالفعل؟",
+"signupHaveAccount2": "تسجيل الدخول"
 }

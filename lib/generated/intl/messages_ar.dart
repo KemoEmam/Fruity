@@ -48,6 +48,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية."),
         "onboarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "onboardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
-        "onboardingSkip": MessageLookupByLibrary.simpleMessage("تخط")
+        "onboardingSkip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "signupAppBar": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "signupButton": MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+        "signupEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "signupError": MessageLookupByLibrary.simpleMessage(
+            "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى."),
+        "signupHaveAccount1":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
+        "signupHaveAccount2":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "signupName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+        "signupPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "signupTerms1": MessageLookupByLibrary.simpleMessage(
+            " من خلال انشاء حساب، فانك توافق على "),
+        "signupTerms2":
+            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا")
       };
 }

@@ -16,5 +16,15 @@
 "loginOr": "Or",
 "loginSignGoogle": "Sign up with Google",
 "loginSignApple": "Sign up with Apple",
-"loginSignFacebook": "Sign up with Facebook"
+"loginSignFacebook": "Sign up with Facebook",
+"signupAppBar": "New Account",
+"signupName": "Full Name",
+"signupEmail": "Email",
+"signupPassword": "Password",
+"signupError": "There was an error creating the account. Please try again.",
+"signupTerms1": "By creating an account, you agree to the",
+"signupTerms2": "Our Terms and Conditions",
+"signupButton": "Create a New Account",
+"signupHaveAccount1": "Already have an account?",
+"signupHaveAccount2": "Sign in"
 }

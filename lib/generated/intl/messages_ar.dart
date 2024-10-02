@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginOr": MessageLookupByLibrary.simpleMessage("أو"),
         "loginPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "loginSignApple":
-            MessageLookupByLibrary.simpleMessage("تسجيل بواسطةأبل"),
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
         "loginSignFacebook":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginSignGoogle":

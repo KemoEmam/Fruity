@@ -1,13 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruity/core/helper/functions/on_generate_route.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
+import 'package:fruity/firebase_options.dart';
 import 'package:fruity/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await SharedPrefsService.init();
   runApp(const Fruity());
 }
@@ -30,7 +35,7 @@ class Fruity extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale('en'),
+      locale: const Locale('ar'),
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,

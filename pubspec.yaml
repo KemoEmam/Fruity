@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   auto_size_text: ^3.0.0
+  bloc: ^8.1.4
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   dots_indicator: ^3.0.0
@@ -36,6 +37,7 @@ dependencies:
   firebase_core: ^3.6.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
@@ -43,6 +45,8 @@ dependencies:
     git:
       url: https://github.com/KemoEmam/ForbiddenPack.git
       ref: main
+  get_it: ^8.0.0
+  meta: ^1.15.0
   shared_preferences: ^2.3.2
 
 dev_dependencies:

@@ -15,11 +15,11 @@ class AuthRepoImpl implements AuthRepo {
     try {
       var user = await firebaseAuthService.createUserWithEmailAndPassword(
           email: email, password: password);
-      return Right(UserModel.fromFirebaseUser(user));
+      return right(UserModel.fromFirebaseUser(user));
     } on CustomExceptions catch (e) {
-      return Left(ServerFailure(message: e.message));
+      return left(ServerFailure(message: e.message));
     } catch (e) {
-      return Left(ServerFailure(message: 'An unexpected error occurred'));
+      return left(ServerFailure(message: 'An unexpected error occurred'));
     }
   }
 }

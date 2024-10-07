@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruity/core/helper/functions/on_generate_route.dart';
+import 'package:fruity/core/router/on_generate_route.dart';
+import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
@@ -14,6 +15,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await SharedPrefsService.init();
+  serviceLocator();
   runApp(const Fruity());
 }
 

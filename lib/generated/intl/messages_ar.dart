@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى."),
+        "signupFieldRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "signupHaveAccount1":
             MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
         "signupHaveAccount2":

@@ -26,5 +26,6 @@
 "signupTerms2": "Our Terms and Conditions",
 "signupButton": "Create a New Account",
 "signupHaveAccount1": "Already have an account?",
-"signupHaveAccount2": "Sign in"
+"signupHaveAccount2": "Sign in",
+"signupFieldRequired": "This field is required"
 }

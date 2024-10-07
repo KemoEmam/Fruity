@@ -26,5 +26,6 @@
 "signupTerms2": "الشروط والاحكام الخاصة بنا",
 "signupButton": "انشاء حساب جديد",
 "signupHaveAccount1": "تمتلك حساب بالفعل؟",
-"signupHaveAccount2": "تسجيل الدخول"
+"signupHaveAccount2": "تسجيل الدخول",
+"signupFieldRequired": "هذا الحقل مطلوب"
 }

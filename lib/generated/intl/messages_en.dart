@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "There was an error creating the account. Please try again."),
+        "signupFieldRequired":
+            MessageLookupByLibrary.simpleMessage("This field is required"),
         "signupHaveAccount1":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "signupHaveAccount2": MessageLookupByLibrary.simpleMessage("Sign in"),

@@ -4,6 +4,6 @@ import 'package:fruity/features/auth/domain/entities/user_entity.dart';
 class UserModel extends UserEntity {
   UserModel({required super.name, required super.email, required super.uId});
 
-  factory UserModel.fromFirebaseUser(User user) =>
-      UserModel(name: user.displayName!, email: user.email!, uId: user.uid);
+  factory UserModel.fromFirebaseUser(User user) => UserModel(
+      name: user.displayName ?? '', email: user.email!, uId: user.uid);
 }

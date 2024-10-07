@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
+import 'package:fruity/generated/l10n.dart';
 
 class CustomTextFormField extends StatelessWidget {
   // final String labelText;
@@ -7,7 +8,7 @@ class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final TextStyle? hintTextStyle;
   final TextEditingController? controller;
-  final String? Function(String?)? validator;
+  final void Function(String?)? onSaved;
   final TextInputType keyboardType;
   final bool obscureText;
   final Widget? prefixIcon;
@@ -17,7 +18,6 @@ class CustomTextFormField extends StatelessWidget {
   final Color borderColor;
   final Color focusedBorderColor;
   final Color enabledBorderColor;
-
   const CustomTextFormField({
     super.key,
     // required this.labelText,
@@ -25,7 +25,6 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     this.hintTextStyle,
     this.controller,
-    this.validator,
     required this.keyboardType,
     this.obscureText = false,
     this.prefixIcon,
@@ -35,13 +34,20 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.prefixIconColor,
     this.suffixIconColor,
+    this.onSaved,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return S.of(context).signupFieldRequired;
+        }
+        return null;
+      },
       controller: controller,
-      validator: validator,
       keyboardType: keyboardType,
       obscureText: obscureText,
       decoration: InputDecoration(

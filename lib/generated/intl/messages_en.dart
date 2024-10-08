@@ -22,6 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
+        "authErrorErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
+            "Error creating the account. Try again."),
+        "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
+            "The email address provided is not valid."),
+        "authErrorSignOut": MessageLookupByLibrary.simpleMessage(
+            "An error occurred while signing out."),
+        "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
+            "Error signing in. Try again."),
+        "authErrorTooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "Too many login attempts. Try again later."),
+        "authErrorUnexpected": MessageLookupByLibrary.simpleMessage(
+            "An unexpected error occurred. Please try again."),
+        "authErrorUserNotFound": MessageLookupByLibrary.simpleMessage(
+            "No user found for that email."),
+        "authErrorWeakPassword": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
+        "authErrorWrongPassword":
+            MessageLookupByLibrary.simpleMessage("Incorrect password."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("Login"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -55,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "There was an error creating the account. Please try again."),
+        "signupErrorTitle": MessageLookupByLibrary.simpleMessage("Error"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "signupHaveAccount1":

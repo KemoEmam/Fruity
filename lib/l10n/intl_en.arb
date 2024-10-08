@@ -27,5 +27,16 @@
 "signupButton": "Create a New Account",
 "signupHaveAccount1": "Already have an account?",
 "signupHaveAccount2": "Sign in",
-"signupFieldRequired": "This field is required"
+"signupFieldRequired": "This field is required",
+"signupErrorTitle": "Error",
+"authErrorWeakPassword": "The password provided is too weak.",
+"authErrorEmailAlreadyInUse": "The account already exists for that email.",
+"authErrorInvalidEmail": "The email address provided is not valid.",
+"authErrorErrorCreatingAccount": "Error creating the account. Try again.",
+"authErrorUserNotFound": "No user found for that email.",
+"authErrorWrongPassword": "Incorrect password.",
+"authErrorTooManyRequests": "Too many login attempts. Try again later.",
+"authErrorSigningIn": "Error signing in. Try again.",
+"authErrorSignOut": "An error occurred while signing out.",
+"authErrorUnexpected": "An unexpected error occurred. Please try again."
 }

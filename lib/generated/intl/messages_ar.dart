@@ -22,6 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "يوجد حساب بالفعل بهذا البريد الإلكتروني."),
+        "authErrorErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى."),
+        "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني المدخل غير صحيح."),
+        "authErrorSignOut":
+            MessageLookupByLibrary.simpleMessage("حدث خطأ أثناء تسجيل الخروج."),
+        "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى."),
+        "authErrorTooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "عدد المحاولات كبير جدًا. حاول لاحقًا."),
+        "authErrorUnexpected": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ غير متوقع. حاول مرة أخرى."),
+        "authErrorUserNotFound": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد مستخدم بهذا البريد الإلكتروني."),
+        "authErrorWeakPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة للغاية."),
+        "authErrorWrongPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
@@ -55,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى."),
+        "signupErrorTitle": MessageLookupByLibrary.simpleMessage("خطأ"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "signupHaveAccount1":

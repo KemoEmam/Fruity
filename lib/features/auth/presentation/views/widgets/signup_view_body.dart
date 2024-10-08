@@ -6,6 +6,7 @@ import 'package:fruity/core/components/custom_text_form_field.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/account_action_text.dart';
+import 'package:fruity/features/auth/presentation/views/widgets/password_field.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/terms_and_conditions_widget.dart';
 import 'package:fruity/generated/l10n.dart';
 
@@ -45,14 +46,10 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   hintText: S.of(context).signupEmail,
                   keyboardType: TextInputType.emailAddress),
               const SizedBox(height: 16),
-              CustomTextFormField(
+              PasswordField(
                 onSaved: (value) {
                   password = value!.trim();
                 },
-                suffixIcon: const Icon(Icons.remove_red_eye),
-                hintText: S.of(context).signupPassword,
-                obscureText: true,
-                keyboardType: TextInputType.visiblePassword,
               ),
               const SizedBox(height: 16),
               TermsAndConditions(onChanged: (value) {}),

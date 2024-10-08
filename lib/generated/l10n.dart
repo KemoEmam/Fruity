@@ -339,6 +339,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Error`
+  String get signupErrorTitle {
+    return Intl.message(
+      'Error',
+      name: 'signupErrorTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get authErrorWeakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'authErrorWeakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get authErrorEmailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'authErrorEmailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address provided is not valid.`
+  String get authErrorInvalidEmail {
+    return Intl.message(
+      'The email address provided is not valid.',
+      name: 'authErrorInvalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error creating the account. Try again.`
+  String get authErrorErrorCreatingAccount {
+    return Intl.message(
+      'Error creating the account. Try again.',
+      name: 'authErrorErrorCreatingAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found for that email.`
+  String get authErrorUserNotFound {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'authErrorUserNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect password.`
+  String get authErrorWrongPassword {
+    return Intl.message(
+      'Incorrect password.',
+      name: 'authErrorWrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many login attempts. Try again later.`
+  String get authErrorTooManyRequests {
+    return Intl.message(
+      'Too many login attempts. Try again later.',
+      name: 'authErrorTooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error signing in. Try again.`
+  String get authErrorSigningIn {
+    return Intl.message(
+      'Error signing in. Try again.',
+      name: 'authErrorSigningIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while signing out.`
+  String get authErrorSignOut {
+    return Intl.message(
+      'An error occurred while signing out.',
+      name: 'authErrorSignOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred. Please try again.`
+  String get authErrorUnexpected {
+    return Intl.message(
+      'An unexpected error occurred. Please try again.',
+      name: 'authErrorUnexpected',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -5,6 +5,7 @@ import 'package:fruity/core/services/firebase_auth_service.dart';
 import 'package:fruity/features/auth/data/models/user_model.dart';
 import 'package:fruity/features/auth/domain/entities/user_entity.dart';
 import 'package:fruity/features/auth/domain/repos/auth_repo.dart';
+import 'package:fruity/generated/l10n.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final FirebaseAuthService firebaseAuthService;
@@ -19,7 +20,7 @@ class AuthRepoImpl implements AuthRepo {
     } on CustomExceptions catch (e) {
       return left(ServerFailure(message: e.message));
     } catch (e) {
-      return left(ServerFailure(message: 'An unexpected error occurred'));
+      return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
   }
 }

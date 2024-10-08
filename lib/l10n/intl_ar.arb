@@ -27,5 +27,16 @@
 "signupButton": "انشاء حساب جديد",
 "signupHaveAccount1": "تمتلك حساب بالفعل؟",
 "signupHaveAccount2": "تسجيل الدخول",
-"signupFieldRequired": "هذا الحقل مطلوب"
+"signupFieldRequired": "هذا الحقل مطلوب",
+"signupErrorTitle": "خطأ",
+"authErrorWeakPassword": "كلمة المرور ضعيفة للغاية.",
+"authErrorEmailAlreadyInUse": "يوجد حساب بالفعل بهذا البريد الإلكتروني.",
+"authErrorInvalidEmail": "البريد الإلكتروني المدخل غير صحيح.",
+"authErrorErrorCreatingAccount": "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى.",
+"authErrorUserNotFound": "لا يوجد مستخدم بهذا البريد الإلكتروني.",
+"authErrorWrongPassword": "كلمة المرور غير صحيحة.",
+"authErrorTooManyRequests": "عدد المحاولات كبير جدًا. حاول لاحقًا.",
+"authErrorSigningIn": "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى.",
+"authErrorSignOut": "حدث خطأ أثناء تسجيل الخروج.",
+"authErrorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى."
 }

@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruity/core/router/on_generate_route.dart';
+import 'package:fruity/core/services/custom_bloc_observer.dart';
 import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
@@ -16,6 +18,7 @@ void main() async {
   );
   await SharedPrefsService.init();
   serviceLocator();
+  Bloc.observer = CustomBlocObserver();
   runApp(const Fruity());
 }
 

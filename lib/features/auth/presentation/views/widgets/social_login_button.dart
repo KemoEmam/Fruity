@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 
-class SocialLoginButton extends StatelessWidget {
-  const SocialLoginButton(
+class SocialSigninButton extends StatelessWidget {
+  const SocialSigninButton(
       {super.key, required this.title, required this.image});
 
   final String title;

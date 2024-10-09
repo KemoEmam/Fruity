@@ -350,11 +350,31 @@ class S {
     );
   }
 
+  /// `Success`
+  String get signupSuccessTitle {
+    return Intl.message(
+      'Success',
+      name: 'signupSuccessTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please accept our Terms and Conditions`
   String get signupErrorTerms {
     return Intl.message(
       'Please accept our Terms and Conditions',
       name: 'signupErrorTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address provided is invalid.`
+  String get authErrorSignupInvalidEmail {
+    return Intl.message(
+      'The email address provided is invalid.',
+      name: 'authErrorSignupInvalidEmail',
       desc: '',
       args: [],
     );
@@ -380,11 +400,11 @@ class S {
     );
   }
 
-  /// `The email address provided is not valid.`
-  String get authErrorInvalidEmail {
+  /// `The password or email provided is incorrect.`
+  String get authErrorInvalidEmailOrPassword {
     return Intl.message(
-      'The email address provided is not valid.',
-      name: 'authErrorInvalidEmail',
+      'The password or email provided is incorrect.',
+      name: 'authErrorInvalidEmailOrPassword',
       desc: '',
       args: [],
     );
@@ -415,16 +435,6 @@ class S {
     return Intl.message(
       'No user found for that email.',
       name: 'authErrorUserNotFound',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Incorrect password.`
-  String get authErrorWrongPassword {
-    return Intl.message(
-      'Incorrect password.',
-      name: 'authErrorWrongPassword',
       desc: '',
       args: [],
     );
@@ -465,6 +475,16 @@ class S {
     return Intl.message(
       'An unexpected error occurred. Please try again.',
       name: 'authErrorUnexpected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account created successfully.`
+  String get authSignupSuccess {
+    return Intl.message(
+      'Account created successfully.',
+      name: 'authSignupSuccess',
       desc: '',
       args: [],
     );

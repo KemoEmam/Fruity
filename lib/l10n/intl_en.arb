@@ -29,16 +29,18 @@
 "signupHaveAccount2": "Sign in",
 "signupFieldRequired": "This field is required",
 "signupErrorTitle": "Error",
+"signupSuccessTitle": "Success",
 "signupErrorTerms": "Please accept our Terms and Conditions",
+"authErrorSignupInvalidEmail": "The email address provided is invalid.",
 "authErrorWeakPassword": "The password provided is too weak.",
 "authErrorEmailAlreadyInUse": "The account already exists for that email.",
-"authErrorInvalidEmail": "The email address provided is not valid.",
+"authErrorInvalidEmailOrPassword": "The password or email provided is incorrect.",
 "authErrorNetworkRequestFailed": "Network request failed. Check your internet connection.",
 "authErrorCreatingAccount": "Error creating the account. Try again.",
 "authErrorUserNotFound": "No user found for that email.",
-"authErrorWrongPassword": "Incorrect password.",
 "authErrorTooManyRequests": "Too many login attempts. Try again later.",
 "authErrorSigningIn": "Error signing in. Try again.",
 "authErrorSignOut": "An error occurred while signing out.",
-"authErrorUnexpected": "An unexpected error occurred. Please try again."
+"authErrorUnexpected": "An unexpected error occurred. Please try again.",
+"authSignupSuccess": "Account created successfully."
 }

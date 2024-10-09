@@ -4,7 +4,7 @@ import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_images.dart';
-import 'package:fruity/features/auth/presentation/views/login_view.dart';
+import 'package:fruity/features/auth/presentation/views/signin_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -59,9 +59,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       () {
         if (!mounted) return;
         if (isOnBoardingSeen) {
-          Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+          Navigator.of(context).pushReplacementNamed(SigninView.routeName);
         } else {
-          Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+          Navigator.of(context).pushReplacementNamed(SigninView.routeName);
         }
       },
     );

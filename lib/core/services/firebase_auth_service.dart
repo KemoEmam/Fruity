@@ -2,16 +2,14 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
-import 'package:fruity/generated/l10n.dart'; // For localization
+import 'package:fruity/generated/l10n.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   // Method to create a user with email and password (Sign up)
-  Future<User> createUserWithEmailAndPassword({
-    required String email,
-    required String password,
-  }) async {
+  Future<User> createUserWithEmailAndPassword(
+      {required String email, required String password}) async {
     try {
       final credential = await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,
@@ -30,10 +28,8 @@ class FirebaseAuthService {
   }
 
   // Method to sign in with email and password
-  Future<User> signInWithEmailAndPassword({
-    required String email,
-    required String password,
-  }) async {
+  Future<User> signInWithEmailAndPassword(
+      {required String email, required String password}) async {
     try {
       final credential = await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
@@ -44,6 +40,7 @@ class FirebaseAuthService {
       log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
       throw _mapFirebaseAuthException(e, AuthAction.signin);
     } catch (e) {
+      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );
@@ -88,7 +85,7 @@ class FirebaseAuthService {
       case 'email-already-in-use':
         return CustomExceptions(message: S.current.authErrorEmailAlreadyInUse);
       case 'invalid-email':
-        return CustomExceptions(message: S.current.authErrorInvalidEmail);
+        return CustomExceptions(message: S.current.authErrorSignupInvalidEmail);
       case 'network-request-failed':
         return CustomExceptions(
             message: S.current.authErrorNetworkRequestFailed);
@@ -102,11 +99,13 @@ class FirebaseAuthService {
       case 'user-not-found':
         return CustomExceptions(message: S.current.authErrorUserNotFound);
       case 'wrong-password':
-        return CustomExceptions(message: S.current.authErrorWrongPassword);
-      case 'invalid-email':
-        return CustomExceptions(message: S.current.authErrorInvalidEmail);
+        return CustomExceptions(
+            message: S.current.authErrorInvalidEmailOrPassword);
       case 'too-many-requests':
         return CustomExceptions(message: S.current.authErrorTooManyRequests);
+      case 'network-request-failed':
+        return CustomExceptions(
+            message: S.current.authErrorNetworkRequestFailed);
       default:
         return CustomExceptions(message: S.current.authErrorSigningIn);
     }

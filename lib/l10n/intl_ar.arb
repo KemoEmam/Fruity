@@ -29,16 +29,18 @@
 "signupHaveAccount2": "تسجيل الدخول",
 "signupFieldRequired": "هذا الحقل مطلوب",
 "signupErrorTitle": "خطأ",
+"signupSuccessTitle": "نجاح",
 "signupErrorTerms": "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا",
 "authErrorWeakPassword": "كلمة المرور ضعيفة للغاية.",
+"authErrorSignupInvalidEmail": "البريد الالكتروني غير صحيح.",
 "authErrorEmailAlreadyInUse": "يوجد حساب بالفعل بهذا البريد الإلكتروني.",
-"authErrorInvalidEmail": "البريد الإلكتروني المدخل غير صحيح.",
+"authErrorInvalidEmailOrPassword": "كلمة المرور أو البريد الإلكتروني غير صحيح.",
 "authErrorNetworkRequestFailed": "فشل الاتصال بالشبكة. تاكد من اتصالك بالانترنت.",
 "authErrorCreatingAccount": "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى.",
 "authErrorUserNotFound": "لا يوجد مستخدم بهذا البريد الإلكتروني.",
-"authErrorWrongPassword": "كلمة المرور غير صحيحة.",
 "authErrorTooManyRequests": "عدد المحاولات كبير جدًا. حاول لاحقًا.",
 "authErrorSigningIn": "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى.",
 "authErrorSignOut": "حدث خطأ أثناء تسجيل الخروج.",
-"authErrorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى."
+"authErrorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى.",
+"authSignupSuccess": "تم انشاء الحساب بنجاح."
 }

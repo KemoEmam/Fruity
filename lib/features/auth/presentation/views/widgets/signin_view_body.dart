@@ -12,8 +12,8 @@ import 'package:fruity/features/auth/presentation/views/widgets/or_divider.dart'
 import 'package:fruity/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:fruity/generated/l10n.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SigninViewBody extends StatelessWidget {
+  const SigninViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,21 +62,21 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 33),
             const OrDivider(),
             const SizedBox(height: 21),
-            SocialLoginButton(
+            SocialSigninButton(
               title: S.of(context).loginSignGoogle,
               image: SvgPicture.asset(
                 Assets.imagesGoogleLogo,
               ),
             ),
             const SizedBox(height: 16),
-            SocialLoginButton(
+            SocialSigninButton(
               title: S.of(context).loginSignApple,
               image: SvgPicture.asset(
                 Assets.imagesAppleLogo,
               ),
             ),
             const SizedBox(height: 16),
-            SocialLoginButton(
+            SocialSigninButton(
               title: S.of(context).loginSignFacebook,
               image: SvgPicture.asset(
                 Assets.imagesFacebookLogo,

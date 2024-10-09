@@ -26,14 +26,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Error creating the account. Try again."),
         "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
-        "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
-            "The email address provided is not valid."),
+        "authErrorInvalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+            "The password or email provided is incorrect."),
         "authErrorNetworkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "Network request failed. Check your internet connection."),
         "authErrorSignOut": MessageLookupByLibrary.simpleMessage(
             "An error occurred while signing out."),
         "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
             "Error signing in. Try again."),
+        "authErrorSignupInvalidEmail": MessageLookupByLibrary.simpleMessage(
+            "The email address provided is invalid."),
         "authErrorTooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many login attempts. Try again later."),
         "authErrorUnexpected": MessageLookupByLibrary.simpleMessage(
@@ -42,8 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "No user found for that email."),
         "authErrorWeakPassword": MessageLookupByLibrary.simpleMessage(
             "The password provided is too weak."),
-        "authErrorWrongPassword":
-            MessageLookupByLibrary.simpleMessage("Incorrect password."),
+        "authSignupSuccess": MessageLookupByLibrary.simpleMessage(
+            "Account created successfully."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("Login"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -87,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupHaveAccount2": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signupName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "signupPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "signupSuccessTitle": MessageLookupByLibrary.simpleMessage("Success"),
         "signupTerms1": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to the "),
         "signupTerms2":

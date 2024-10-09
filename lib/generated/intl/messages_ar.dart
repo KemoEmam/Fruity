@@ -26,14 +26,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى."),
         "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل بهذا البريد الإلكتروني."),
-        "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
-            "البريد الإلكتروني المدخل غير صحيح."),
+        "authErrorInvalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور أو البريد الإلكتروني غير صحيح."),
         "authErrorNetworkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "فشل الاتصال بالشبكة. تاكد من اتصالك بالانترنت."),
         "authErrorSignOut":
             MessageLookupByLibrary.simpleMessage("حدث خطأ أثناء تسجيل الخروج."),
         "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى."),
+        "authErrorSignupInvalidEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صحيح."),
         "authErrorTooManyRequests": MessageLookupByLibrary.simpleMessage(
             "عدد المحاولات كبير جدًا. حاول لاحقًا."),
         "authErrorUnexpected": MessageLookupByLibrary.simpleMessage(
@@ -42,8 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يوجد مستخدم بهذا البريد الإلكتروني."),
         "authErrorWeakPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة للغاية."),
-        "authErrorWrongPassword":
-            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة."),
+        "authSignupSuccess":
+            MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
@@ -88,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signupName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "signupPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "signupSuccessTitle": MessageLookupByLibrary.simpleMessage("نجاح"),
         "signupTerms1": MessageLookupByLibrary.simpleMessage(
             " من خلال انشاء حساب، فانك توافق على "),
         "signupTerms2":

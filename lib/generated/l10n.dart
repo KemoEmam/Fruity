@@ -350,6 +350,16 @@ class S {
     );
   }
 
+  /// `Please accept our Terms and Conditions`
+  String get signupErrorTerms {
+    return Intl.message(
+      'Please accept our Terms and Conditions',
+      name: 'signupErrorTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The password provided is too weak.`
   String get authErrorWeakPassword {
     return Intl.message(
@@ -380,11 +390,21 @@ class S {
     );
   }
 
+  /// `Network request failed. Check your internet connection.`
+  String get authErrorNetworkRequestFailed {
+    return Intl.message(
+      'Network request failed. Check your internet connection.',
+      name: 'authErrorNetworkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Error creating the account. Try again.`
-  String get authErrorErrorCreatingAccount {
+  String get authErrorCreatingAccount {
     return Intl.message(
       'Error creating the account. Try again.',
-      name: 'authErrorErrorCreatingAccount',
+      name: 'authErrorCreatingAccount',
       desc: '',
       args: [],
     );

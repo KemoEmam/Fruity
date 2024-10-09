@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
 import 'package:fruity/generated/l10n.dart'; // For localization
@@ -17,8 +19,10 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+      log('Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signup);
     } catch (e) {
+      log('Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected, // Localized error message
       );
@@ -37,6 +41,7 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
       throw _mapFirebaseAuthException(e, AuthAction.signin);
     } catch (e) {
       throw CustomExceptions(
@@ -54,6 +59,7 @@ class FirebaseAuthService {
         message: S.current.authErrorSignOut, // Localized error message
       );
     } catch (e) {
+      log('Exception in FirebaseAuthService.signOut: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );
@@ -83,9 +89,11 @@ class FirebaseAuthService {
         return CustomExceptions(message: S.current.authErrorEmailAlreadyInUse);
       case 'invalid-email':
         return CustomExceptions(message: S.current.authErrorInvalidEmail);
-      default:
+      case 'network-request-failed':
         return CustomExceptions(
-            message: S.current.authErrorErrorCreatingAccount);
+            message: S.current.authErrorNetworkRequestFailed);
+      default:
+        return CustomExceptions(message: S.current.authErrorCreatingAccount);
     }
   }
 

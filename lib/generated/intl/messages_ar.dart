@@ -22,12 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى."),
         "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل بهذا البريد الإلكتروني."),
-        "authErrorErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
-            "حدث خطأ أثناء إنشاء الحساب. حاول مرة أخرى."),
         "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
             "البريد الإلكتروني المدخل غير صحيح."),
+        "authErrorNetworkRequestFailed": MessageLookupByLibrary.simpleMessage(
+            "فشل الاتصال بالشبكة. تاكد من اتصالك بالانترنت."),
         "authErrorSignOut":
             MessageLookupByLibrary.simpleMessage("حدث خطأ أثناء تسجيل الخروج."),
         "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
@@ -75,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى."),
+        "signupErrorTerms": MessageLookupByLibrary.simpleMessage(
+            "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا"),
         "signupErrorTitle": MessageLookupByLibrary.simpleMessage("خطأ"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),

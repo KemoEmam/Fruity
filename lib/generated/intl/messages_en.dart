@@ -22,12 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
+            "Error creating the account. Try again."),
         "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
-        "authErrorErrorCreatingAccount": MessageLookupByLibrary.simpleMessage(
-            "Error creating the account. Try again."),
         "authErrorInvalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address provided is not valid."),
+        "authErrorNetworkRequestFailed": MessageLookupByLibrary.simpleMessage(
+            "Network request failed. Check your internet connection."),
         "authErrorSignOut": MessageLookupByLibrary.simpleMessage(
             "An error occurred while signing out."),
         "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
@@ -75,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "signupError": MessageLookupByLibrary.simpleMessage(
             "There was an error creating the account. Please try again."),
+        "signupErrorTerms": MessageLookupByLibrary.simpleMessage(
+            "Please accept our Terms and Conditions"),
         "signupErrorTitle": MessageLookupByLibrary.simpleMessage("Error"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),

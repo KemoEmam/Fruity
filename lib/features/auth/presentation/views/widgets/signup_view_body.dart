@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/custom_button.dart';
 import 'package:fruity/core/components/custom_text_form_field.dart';
+import 'package:fruity/core/components/show_snack_bar.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/account_action_text.dart';
@@ -21,6 +22,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   late String email, password, name;
+  bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -52,24 +54,20 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 },
               ),
               const SizedBox(height: 16),
-              TermsAndConditions(onChanged: (value) {}),
+              TermsAndConditions(
+                onChanged: (value) {
+                  setState(() {
+                    isTermsAccepted = value;
+                  });
+                },
+              ),
               const SizedBox(height: 30),
               CustomButton(
                 textStyle:
                     AppTextStyles.cairoBold16.copyWith(color: Colors.white),
                 text: S.of(context).signupButton,
                 onPressed: () {
-                  FocusScope.of(context).unfocus();
-                  if (formKey.currentState!.validate()) {
-                    formKey.currentState!.save();
-                    context
-                        .read<SignupCubit>()
-                        .createUserWithEmailAndPassword(email, password, name);
-                  } else {
-                    setState(() {
-                      autovalidateMode = AutovalidateMode.always;
-                    });
-                  }
+                  signupValidation(context);
                 },
               ),
               const SizedBox(height: 26),
@@ -85,5 +83,28 @@ class _SignupViewBodyState extends State<SignupViewBody> {
         ),
       ),
     );
+  }
+
+  void signupValidation(BuildContext context) {
+    FocusScope.of(context).unfocus();
+    if (formKey.currentState!.validate()) {
+      formKey.currentState!.save();
+      if (isTermsAccepted) {
+        context
+            .read<SignupCubit>()
+            .createUserWithEmailAndPassword(email, password, name);
+      } else {
+        showSnackBar(
+          title: S.of(context).signupErrorTitle,
+          backgroundColor: Colors.redAccent,
+          context: context,
+          message: S.of(context).signupErrorTerms,
+        );
+      }
+    } else {
+      setState(() {
+        autovalidateMode = AutovalidateMode.always;
+      });
+    }
   }
 }

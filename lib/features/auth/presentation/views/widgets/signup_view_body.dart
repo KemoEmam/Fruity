@@ -49,6 +49,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   keyboardType: TextInputType.emailAddress),
               const SizedBox(height: 16),
               PasswordField(
+                hintText: S.of(context).signupPassword,
                 onSaved: (value) {
                   password = value!.trim();
                 },

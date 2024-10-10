@@ -37,7 +37,7 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
+      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signin);
     } catch (e) {
       log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
@@ -85,7 +85,7 @@ class FirebaseAuthService {
       case 'email-already-in-use':
         return CustomExceptions(message: S.current.authErrorEmailAlreadyInUse);
       case 'invalid-email':
-        return CustomExceptions(message: S.current.authErrorSignupInvalidEmail);
+        return CustomExceptions(message: S.current.authErrorSignInvalidEmail);
       case 'network-request-failed':
         return CustomExceptions(
             message: S.current.authErrorNetworkRequestFailed);
@@ -99,6 +99,11 @@ class FirebaseAuthService {
       case 'user-not-found':
         return CustomExceptions(message: S.current.authErrorUserNotFound);
       case 'wrong-password':
+        return CustomExceptions(
+            message: S.current.authErrorInvalidEmailOrPassword);
+      case 'invalid-email':
+        return CustomExceptions(message: S.current.authErrorSignInvalidEmail);
+      case 'invalid-credential':
         return CustomExceptions(
             message: S.current.authErrorInvalidEmailOrPassword);
       case 'too-many-requests':

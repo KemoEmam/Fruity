@@ -27,15 +27,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "authErrorEmailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "يوجد حساب بالفعل بهذا البريد الإلكتروني."),
         "authErrorInvalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
-            "كلمة المرور أو البريد الإلكتروني غير صحيح."),
+            "البريد الالكتروني او كلمة المرور غير صحيحة."),
         "authErrorNetworkRequestFailed": MessageLookupByLibrary.simpleMessage(
             "فشل الاتصال بالشبكة. تاكد من اتصالك بالانترنت."),
+        "authErrorSignInvalidEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صحيح."),
         "authErrorSignOut":
             MessageLookupByLibrary.simpleMessage("حدث خطأ أثناء تسجيل الخروج."),
         "authErrorSigningIn": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى."),
-        "authErrorSignupInvalidEmail":
-            MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صحيح."),
         "authErrorTooManyRequests": MessageLookupByLibrary.simpleMessage(
             "عدد المحاولات كبير جدًا. حاول لاحقًا."),
         "authErrorUnexpected": MessageLookupByLibrary.simpleMessage(

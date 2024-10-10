@@ -371,10 +371,10 @@ class S {
   }
 
   /// `The email address provided is invalid.`
-  String get authErrorSignupInvalidEmail {
+  String get authErrorSignInvalidEmail {
     return Intl.message(
       'The email address provided is invalid.',
-      name: 'authErrorSignupInvalidEmail',
+      name: 'authErrorSignInvalidEmail',
       desc: '',
       args: [],
     );
@@ -400,10 +400,10 @@ class S {
     );
   }
 
-  /// `The password or email provided is incorrect.`
+  /// `The email or password provided is incorrect.`
   String get authErrorInvalidEmailOrPassword {
     return Intl.message(
-      'The password or email provided is incorrect.',
+      'The email or password provided is incorrect.',
       name: 'authErrorInvalidEmailOrPassword',
       desc: '',
       args: [],

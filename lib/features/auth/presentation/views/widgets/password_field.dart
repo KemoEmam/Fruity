@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/components/custom_text_form_field.dart';
-import '../../../../../generated/l10n.dart';
 
 class PasswordField extends StatefulWidget {
-  const PasswordField({
-    super.key,
-    this.onSaved,
-  });
   final void Function(String?)? onSaved;
+  final String hintText;
+  const PasswordField({super.key, this.onSaved, required this.hintText});
   @override
   State<PasswordField> createState() => _PasswordFieldState();
 }
@@ -29,7 +26,7 @@ class _PasswordFieldState extends State<PasswordField> {
           });
         },
       ),
-      hintText: S.of(context).signupPassword,
+      hintText: widget.hintText,
       keyboardType: TextInputType.visiblePassword,
     );
   }

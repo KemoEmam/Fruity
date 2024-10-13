@@ -49,6 +49,7 @@ dependencies:
       url: https://github.com/KemoEmam/ForbiddenPack.git
       ref: main
   get_it: ^8.0.0
+  logger: ^2.4.0
   meta: ^1.15.0
   modal_progress_hud_nsn: ^0.5.1
   shared_preferences: ^2.3.2

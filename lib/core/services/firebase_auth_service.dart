@@ -1,11 +1,14 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
+import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/generated/l10n.dart';
+
+import 'package:logger/logger.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
+  final logger = getIt<Logger>();
 
   // Method to create a user with email and password (Sign up)
   Future<User> createUserWithEmailAndPassword(
@@ -17,10 +20,12 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log('Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e and code is:${e.code}');
+      logger.e(
+          'Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signup);
     } catch (e) {
-      log('Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e');
+      logger.e(
+          'Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected, // Localized error message
       );
@@ -37,10 +42,12 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e and code is:${e.code}');
+      logger.e(
+          'Exception in FirebaseAuthService.signInWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signin);
     } catch (e) {
-      log('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
+      logger
+          .e('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );
@@ -56,7 +63,7 @@ class FirebaseAuthService {
         message: S.current.authErrorSignOut, // Localized error message
       );
     } catch (e) {
-      log('Exception in FirebaseAuthService.signOut: $e');
+      logger.e('Exception in FirebaseAuthService.signOut: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );

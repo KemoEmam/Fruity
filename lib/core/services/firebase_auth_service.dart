@@ -2,12 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
 import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/generated/l10n.dart';
-
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:logger/logger.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-
   final logger = getIt<Logger>();
 
   // Method to create a user with email and password (Sign up)
@@ -20,14 +19,14 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      logger.e(
+      logger.w(
           'Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signup);
     } catch (e) {
-      logger.e(
+      logger.w(
           'Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e');
       throw CustomExceptions(
-        message: S.current.authErrorUnexpected, // Localized error message
+        message: S.current.authErrorUnexpected,
       );
     }
   }
@@ -42,12 +41,12 @@ class FirebaseAuthService {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      logger.e(
+      logger.w(
           'Exception in FirebaseAuthService.signInWithEmailAndPassword: $e and code is:${e.code}');
       throw _mapFirebaseAuthException(e, AuthAction.signin);
     } catch (e) {
       logger
-          .e('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
+          .w('Exception in FirebaseAuthService.signInWithEmailAndPassword: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );
@@ -60,14 +59,26 @@ class FirebaseAuthService {
       await _firebaseAuth.signOut();
     } on FirebaseAuthException {
       throw CustomExceptions(
-        message: S.current.authErrorSignOut, // Localized error message
+        message: S.current.authErrorSignOut,
       );
     } catch (e) {
-      logger.e('Exception in FirebaseAuthService.signOut: $e');
+      logger.w('Exception in FirebaseAuthService.signOut: $e');
       throw CustomExceptions(
         message: S.current.authErrorUnexpected,
       );
     }
+  }
+
+  // Method to sign in with Google
+  Future<User> signInWithGoogle() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
   // Centralized method for error handling

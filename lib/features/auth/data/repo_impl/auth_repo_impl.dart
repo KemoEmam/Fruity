@@ -1,16 +1,17 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
 import 'package:fruity/core/errors/failure.dart';
 import 'package:fruity/core/services/firebase_auth_service.dart';
+import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/features/auth/data/models/user_model.dart';
 import 'package:fruity/features/auth/domain/entities/user_entity.dart';
 import 'package:fruity/features/auth/domain/repos/auth_repo.dart';
 import 'package:fruity/generated/l10n.dart';
+import 'package:logger/logger.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final FirebaseAuthService firebaseAuthService;
+  final logger = getIt<Logger>();
   AuthRepoImpl({required this.firebaseAuthService});
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
@@ -22,7 +23,7 @@ class AuthRepoImpl implements AuthRepo {
     } on CustomExceptions catch (e) {
       return left(ServerFailure(message: e.message));
     } catch (e) {
-      log('Exception in AuthRepoImpl.createUserWithEmailAndPassword: $e');
+      logger.w('Exception in AuthRepoImpl.createUserWithEmailAndPassword: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
   }
@@ -37,7 +38,18 @@ class AuthRepoImpl implements AuthRepo {
     } on CustomExceptions catch (e) {
       return left(ServerFailure(message: e.message));
     } catch (e) {
-      log('Exception in AuthRepoImpl.signInWithEmailAndPassword: $e');
+      logger.w('Exception in AuthRepoImpl.signInWithEmailAndPassword: $e');
+      return left(ServerFailure(message: S.current.authErrorUnexpected));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      var user = await firebaseAuthService.signInWithGoogle();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      logger.w('Exception in AuthRepoImpl.signInWithGoogle: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
   }

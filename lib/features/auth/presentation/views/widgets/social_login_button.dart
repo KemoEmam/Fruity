@@ -3,11 +3,11 @@ import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 
 class SocialSigninButton extends StatelessWidget {
   const SocialSigninButton(
-      {super.key, required this.title, required this.image});
+      {super.key, required this.title, required this.image, this.onPressed});
 
   final String title;
   final Widget image;
-
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,7 +20,7 @@ class SocialSigninButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: ListTile(
           visualDensity:
               const VisualDensity(vertical: VisualDensity.minimumDensity),

@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
 import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/generated/l10n.dart';
@@ -79,6 +80,35 @@ class FirebaseAuthService {
       idToken: googleAuth?.idToken,
     );
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+  }
+
+  // Method to sign in with Facebook
+  Future<User> signInWithFacebook() async {
+    try {
+      final LoginResult loginResult = await FacebookAuth.instance.login();
+
+      if (loginResult.status == LoginStatus.success &&
+          loginResult.accessToken != null) {
+        // Get the access token and sign in with Facebook credential
+        final OAuthCredential facebookAuthCredential =
+            FacebookAuthProvider.credential(
+          loginResult.accessToken!.tokenString,
+        );
+
+        // Sign in with the credential and return the authenticated user
+        final userCredential = await FirebaseAuth.instance
+            .signInWithCredential(facebookAuthCredential);
+        return userCredential.user!;
+      } else {
+        // Handle login failure scenarios
+        throw Exception(
+            'Facebook login failed with status: ${loginResult.status}');
+      }
+    } catch (e) {
+      // Log or rethrow the exception
+      logger.w('Exception in FirebaseAuthService.signInWithFacebook: $e');
+      throw CustomExceptions(message: 'Facebook login failed: $e');
+    }
   }
 
   // Centralized method for error handling

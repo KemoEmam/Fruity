@@ -1,4 +1,4 @@
-package com.example.fruity
+package com.kemo.fruity
 
 import io.flutter.embedding.android.FlutterActivity
 

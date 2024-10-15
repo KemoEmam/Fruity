@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:257383338588:android:261cd71bff3d2251394c99",
+        "mobilesdk_app_id": "1:257383338588:android:d152603e0ebff5b3394c99",
         "android_client_info": {
-          "package_name": "com.example.fruity"
+          "package_name": "com.kemo.fruity"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "257383338588-2o5lrf3req4oispcb58jagl8oc1a4jt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kemo.fruity",
+            "certificate_hash": "b43db19859c72cf65c8d31c0834dd66484e3dc51"
+          }
+        },
+        {
+          "client_id": "257383338588-rt166iqmf27e1p1cvju0hns8j71b2v6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDWSCg3JpT2j_ZMm6yDLDY__CzsxT962lU"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257383338588-rt166iqmf27e1p1cvju0hns8j71b2v6k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257383338588-lpgndapo11mr7o3ogusphgin9rv9r40v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fruity"
+              }
+            }
+          ]
         }
       }
     }

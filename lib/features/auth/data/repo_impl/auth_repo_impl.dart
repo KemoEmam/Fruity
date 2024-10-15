@@ -53,4 +53,15 @@ class AuthRepoImpl implements AuthRepo {
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      var user = await firebaseAuthService.signInWithFacebook();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      logger.w('Exception in AuthRepoImpl.signInWithFacebook: $e');
+      return left(ServerFailure(message: S.current.authErrorUnexpected));
+    }
+  }
 }

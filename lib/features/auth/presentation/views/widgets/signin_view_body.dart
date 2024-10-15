@@ -111,6 +111,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 image: SvgPicture.asset(
                   Assets.imagesFacebookLogo,
                 ),
+                onPressed: () {
+                  context.read<SigninCubit>().signInWithFacebook();
+                },
               ),
             ],
           ),

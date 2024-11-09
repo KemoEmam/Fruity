@@ -104,6 +104,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 image: SvgPicture.asset(
                   Assets.imagesAppleLogo,
                 ),
+                onPressed: () {
+                  context.read<SigninCubit>().signInWithApple();
+                },
               ),
               const SizedBox(height: 16),
               SocialSigninButton(

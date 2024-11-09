@@ -64,4 +64,15 @@ class AuthRepoImpl implements AuthRepo {
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() async {
+    try {
+      var user = await firebaseAuthService.signInWithApple();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      logger.w('Exception in AuthRepoImpl.signInWithApple: $e');
+      return left(ServerFailure(message: S.current.authErrorUnexpected));
+    }
+  }
 }

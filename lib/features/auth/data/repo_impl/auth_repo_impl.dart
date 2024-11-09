@@ -1,8 +1,11 @@
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruity/core/errors/custom_exceptions.dart';
 import 'package:fruity/core/errors/failure.dart';
+import 'package:fruity/core/services/database_service.dart';
 import 'package:fruity/core/services/firebase_auth_service.dart';
 import 'package:fruity/core/services/service_locator.dart';
+import 'package:fruity/core/utils/backend_endpoints.dart';
 import 'package:fruity/features/auth/data/models/user_model.dart';
 import 'package:fruity/features/auth/domain/entities/user_entity.dart';
 import 'package:fruity/features/auth/domain/repos/auth_repo.dart';
@@ -11,18 +14,30 @@ import 'package:logger/logger.dart';
 
 class AuthRepoImpl implements AuthRepo {
   final FirebaseAuthService firebaseAuthService;
+  final DatabaseService databaseService;
   final logger = getIt<Logger>();
-  AuthRepoImpl({required this.firebaseAuthService});
+  AuthRepoImpl(
+      {required this.databaseService, required this.firebaseAuthService});
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
       String email, String password, String name) async {
+    User? user;
     try {
-      var user = await firebaseAuthService.createUserWithEmailAndPassword(
+      user = await firebaseAuthService.createUserWithEmailAndPassword(
           email: email, password: password);
-      return right(UserModel.fromFirebaseUser(user));
+      // var userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserEntity(name: name, email: email, uId: user.uid);
+      addUserData(user: userEntity);
+      return right(userEntity);
     } on CustomExceptions catch (e) {
+      if (user != null) {
+        await firebaseAuthService.deleteUser();
+      }
       return left(ServerFailure(message: e.message));
     } catch (e) {
+      if (user != null) {
+        await firebaseAuthService.deleteUser();
+      }
       logger.w('Exception in AuthRepoImpl.createUserWithEmailAndPassword: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
@@ -74,5 +89,13 @@ class AuthRepoImpl implements AuthRepo {
       logger.w('Exception in AuthRepoImpl.signInWithApple: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
+  }
+
+  @override
+  Future<void> addUserData({required UserEntity user}) async {
+    await databaseService.addData(
+      path: BackendEndpoints.addUserData,
+      data: user.toMap(),
+    );
   }
 }

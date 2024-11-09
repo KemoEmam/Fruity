@@ -3,6 +3,7 @@ import 'package:fruity/core/errors/failure.dart';
 import 'package:fruity/features/auth/domain/entities/user_entity.dart';
 
 abstract class AuthRepo {
+  // Auth methods
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
       String email, String password, String name);
 
@@ -14,4 +15,6 @@ abstract class AuthRepo {
   Future<Either<Failure, UserEntity>> signInWithFacebook();
 
   Future<Either<Failure, UserEntity>> signInWithApple();
+
+  Future<void> addUserData({required UserEntity user});
 }

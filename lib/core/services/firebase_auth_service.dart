@@ -15,6 +15,18 @@ class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final logger = getIt<Logger>();
 
+//delete user account
+  Future deleteUser() async {
+    try {
+      await _firebaseAuth.currentUser!.delete();
+    } catch (e) {
+      logger.w('Exception in FirebaseAuthService.deleteUser: $e');
+      throw CustomExceptions(
+        message: S.current.authErrorUnexpected,
+      );
+    }
+  }
+
   // Method to create a user with email and password (Sign up)
   Future<User> createUserWithEmailAndPassword(
       {required String email, required String password}) async {

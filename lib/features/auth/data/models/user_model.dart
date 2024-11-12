@@ -6,4 +6,8 @@ class UserModel extends UserEntity {
 
   factory UserModel.fromFirebaseUser(User user) => UserModel(
       name: user.displayName ?? '', email: user.email ?? '', uId: user.uid);
+
+  //from json
+  factory UserModel.fromMap(Map<String, dynamic> json) =>
+      UserModel(name: json['name'], email: json['email'], uId: json['uId']);
 }

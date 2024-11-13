@@ -19,7 +19,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
         if (state is SignupSuccess) {
           showSnackBar(
             context: context,
-            title: S.of(context).signupSuccessTitle,
+            title: S.of(context).successTitle,
             message: S.of(context).authSignupSuccess,
             backgroundColor: AppColors.primaryColor,
             icon: Icons.check,
@@ -39,7 +39,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
         } else if (state is SignupFailure) {
           showSnackBar(
             context: context,
-            title: S.of(context).signupErrorTitle,
+            title: S.of(context).errorTitle,
             message: state.message,
             backgroundColor: Colors.redAccent,
             icon: Icons.error, // Error icon

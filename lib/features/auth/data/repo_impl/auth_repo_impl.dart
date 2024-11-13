@@ -39,12 +39,6 @@ class AuthRepoImpl implements AuthRepo {
     }
   }
 
-  Future<void> deleteUser(User? user) async {
-    if (user != null) {
-      await firebaseAuthService.deleteUser();
-    }
-  }
-
   @override
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
       String email, String password) async {
@@ -116,7 +110,30 @@ class AuthRepoImpl implements AuthRepo {
     }
   }
 
+//reset password with email with errors handling
   @override
+  Future<void> resetPasswordWithEmail(String email) async {
+    try {
+      await firebaseAuthService.resetPasswordWithEmail(email);
+    } on CustomExceptions catch (e) {
+      logger
+          .w('Exception in AuthRepoImpl.resetPasswordWithEmail: ${e.message}');
+      rethrow;
+    } catch (e) {
+      logger
+          .w('Unexpected exception in AuthRepoImpl.resetPasswordWithEmail: $e');
+      throw CustomExceptions(message: S.current.authErrorUnexpected);
+    }
+  }
+
+  @override
+  Future<void> deleteUser(User? user) async {
+    if (user != null) {
+      await firebaseAuthService.deleteUser();
+    }
+  }
+
+//CRUD operations
   Future<void> addUserData({required UserEntity user}) async {
     await databaseService.addData(
       path: BackendEndpoints.addUserData,
@@ -125,7 +142,6 @@ class AuthRepoImpl implements AuthRepo {
     );
   }
 
-  @override
   Future<UserEntity> getUserData({required String uId}) async {
     var data = await databaseService.getData(
       path: BackendEndpoints.getUserData,
@@ -134,7 +150,6 @@ class AuthRepoImpl implements AuthRepo {
     return UserModel.fromMap(data);
   }
 
-  @override
   Future<bool> checkIfUserExists(
       {required String path, required String docId}) async {
     return await databaseService.checkIfDataExists(path: path, docId: docId);

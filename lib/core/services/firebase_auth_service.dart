@@ -15,7 +15,7 @@ class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final logger = getIt<Logger>();
 
-//delete user account
+  // Delete user account
   Future deleteUser() async {
     try {
       await _firebaseAuth.currentUser!.delete();
@@ -49,6 +49,19 @@ class FirebaseAuthService {
     }
   }
 
+  // Reset password method with error handling using enums
+  Future<void> resetPasswordWithEmail(String email) async {
+    try {
+      await _firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      logger.w('Exception in FirebaseAuthService.resetPasswordWithEmail: $e');
+      throw _mapFirebaseAuthException(e, AuthAction.resetPassword);
+    } catch (e) {
+      logger.w('Exception in FirebaseAuthService.resetPasswordWithEmail: $e');
+      throw CustomExceptions(message: S.current.authErrorUnexpected);
+    }
+  }
+
   // Method to sign in with email and password
   Future<User> signInWithEmailAndPassword(
       {required String email, required String password}) async {
@@ -71,14 +84,13 @@ class FirebaseAuthService {
     }
   }
 
-  // Method to sign out the user
+  // Method to sign out the user with error handling
   Future<void> signOut() async {
     try {
       await _firebaseAuth.signOut();
-    } on FirebaseAuthException {
-      throw CustomExceptions(
-        message: S.current.authErrorSignOut,
-      );
+    } on FirebaseAuthException catch (e) {
+      logger.w('Exception in FirebaseAuthService.signOut: $e');
+      throw _mapFirebaseAuthException(e, AuthAction.signout);
     } catch (e) {
       logger.w('Exception in FirebaseAuthService.signOut: $e');
       throw CustomExceptions(
@@ -179,7 +191,7 @@ class FirebaseAuthService {
         .user!;
   }
 
-  // Centralized method for error handling
+  // Centralized method for error handling using AuthAction enum
   CustomExceptions _mapFirebaseAuthException(
       FirebaseAuthException e, AuthAction action) {
     switch (action) {
@@ -187,6 +199,8 @@ class FirebaseAuthService {
         return _handleSignupErrors(e);
       case AuthAction.signin:
         return _handleSigninErrors(e);
+      case AuthAction.resetPassword:
+        return _handleResetPasswordErrors(e);
       case AuthAction.signout:
         return CustomExceptions(message: S.current.authErrorSignOut);
       default:
@@ -231,6 +245,20 @@ class FirebaseAuthService {
         return CustomExceptions(message: S.current.authErrorSigningIn);
     }
   }
+
+  CustomExceptions _handleResetPasswordErrors(FirebaseAuthException e) {
+    switch (e.code) {
+      case 'invalid-email':
+        return CustomExceptions(message: S.current.authErrorSignInvalidEmail);
+      case 'user-not-found':
+        return CustomExceptions(message: S.current.passwordEmaildoesntexist);
+      case 'network-request-failed':
+        return CustomExceptions(
+            message: S.current.authErrorNetworkRequestFailed);
+      default:
+        return CustomExceptions(message: S.current.passwordErrorReset);
+    }
+  }
 }
 
-enum AuthAction { signup, signin, signout }
+enum AuthAction { signup, signin, signout, resetPassword }

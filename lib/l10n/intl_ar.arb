@@ -7,16 +7,19 @@
 "onboarding2Title": "ابحث وتسوق",
 "onboarding2Subtitle": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية.",
 "onboardingButton": "ابدأ الان",
+
+
 "loginAppBar": "تسجيل الدخول",
 "loginEmail": "البريد الالكتروني",
 "loginPassword": "كلمة المرور",
-"loginForgotPassword": "نسيت كلمة المرور؟",
+"loginForgotPassword": "نسيت كلمة المرور؟", 
 "loginCreateAccount1": "لا تمتلك حساب؟",
 "loginCreateAccount2": "قم بانشاء حساب",
 "loginOr": "أو",
 "loginSignGoogle": "تسجيل بواسطة جوجل",
 "loginSignApple": "تسجيل بواسطة أبل",
 "loginSignFacebook": "تسجيل بواسطة فيسبوك",
+
 "signupAppBar": "حساب جديد",
 "signupName": "الاسم كامل",
 "signupEmail": "البريد الالكتروني",
@@ -27,9 +30,10 @@
 "signupButton": "انشاء حساب جديد",
 "signupHaveAccount1": "تمتلك حساب بالفعل؟",
 "signupHaveAccount2": "تسجيل الدخول",
+
 "signupFieldRequired": "هذا الحقل مطلوب",
-"signupErrorTitle": "خطأ",
-"signupSuccessTitle": "نجاح",
+"errorTitle": "خطأ",
+"successTitle": "نجاح",
 "signupErrorTerms": "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا",
 "authErrorWeakPassword": "كلمة المرور ضعيفة للغاية.",
 "authErrorSignInvalidEmail": "البريد الالكتروني غير صحيح.",
@@ -42,5 +46,13 @@
 "authErrorSigningIn": "حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى.",
 "authErrorSignOut": "حدث خطأ أثناء تسجيل الخروج.",
 "authErrorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى.",
-"authSignupSuccess": "تم انشاء الحساب بنجاح."
+"authSignupSuccess": "تم انشاء الحساب بنجاح.",
+
+"passwordAppBar": "تغيير كلمة المرور",
+"passwordViewBody": "لا تقلق ، ما عليك سوى كتابة بريدك الالكتروني المسجل وسنرسل رمز التحقق.",
+"passwordButton": "ارسال رمز التحقق",
+"passwordSendLink": "تم إرسال رابط إعادة تعيين كلمة المرور إليك. يرجى التحقق من بريدك الإلكتروني للحصول على رابط التغيير.",
+"passwordError": "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى.",
+"passwordEmaildoesntexist": "البريد الإلكتروني المقدم غير موجود في سجلاتنا. يرجى التحقق من بريدك الإلكتروني والمحاولة مرة أخرى.",
+"passwordErrorReset": "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى."
 }

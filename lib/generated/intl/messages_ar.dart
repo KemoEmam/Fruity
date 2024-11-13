@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة للغاية."),
         "authSignupSuccess":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
+        "errorTitle": MessageLookupByLibrary.simpleMessage("خطأ"),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
@@ -73,6 +74,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding2Title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "onboardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "onboardingSkip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "passwordAppBar":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "passwordButton":
+            MessageLookupByLibrary.simpleMessage("ارسال رمز التحقق"),
+        "passwordEmaildoesntexist": MessageLookupByLibrary.simpleMessage(
+            "البريد الإلكتروني المقدم غير موجود في سجلاتنا. يرجى التحقق من بريدك الإلكتروني والمحاولة مرة أخرى."),
+        "passwordError": MessageLookupByLibrary.simpleMessage(
+            "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى."),
+        "passwordErrorReset": MessageLookupByLibrary.simpleMessage(
+            "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى."),
+        "passwordSendLink": MessageLookupByLibrary.simpleMessage(
+            "تم إرسال رابط إعادة تعيين كلمة المرور إليك. يرجى التحقق من بريدك الإلكتروني للحصول على رابط التغيير."),
+        "passwordViewBody": MessageLookupByLibrary.simpleMessage(
+            "لا تقلق ، ما عليك سوى كتابة بريدك الالكتروني المسجل وسنرسل رمز التحقق."),
         "signupAppBar": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "signupButton": MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "signupEmail":
@@ -81,7 +96,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "هناك خطأ في انشاء الحساب. الرجاء المحاولة مرة أخرى."),
         "signupErrorTerms": MessageLookupByLibrary.simpleMessage(
             "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا"),
-        "signupErrorTitle": MessageLookupByLibrary.simpleMessage("خطأ"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "signupHaveAccount1":
@@ -90,10 +104,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signupName": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "signupPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "signupSuccessTitle": MessageLookupByLibrary.simpleMessage("نجاح"),
         "signupTerms1": MessageLookupByLibrary.simpleMessage(
             " من خلال انشاء حساب، فانك توافق على "),
         "signupTerms2":
-            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا")
+            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا"),
+        "successTitle": MessageLookupByLibrary.simpleMessage("نجاح")
       };
 }

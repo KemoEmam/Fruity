@@ -8,6 +8,7 @@ import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
+import 'package:fruity/features/auth/presentation/views/password_view.dart';
 import 'package:fruity/features/auth/presentation/views/signup_view.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/account_action_text.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/or_divider.dart';
@@ -55,10 +56,15 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    S.of(context).loginForgotPassword,
-                    style: AppTextStyles.cairoSemiBold13.copyWith(
-                      color: AppColors.primaryLightColor,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, PasswordView.routeName);
+                    },
+                    child: Text(
+                      S.of(context).loginForgotPassword,
+                      style: AppTextStyles.cairoSemiBold13.copyWith(
+                        color: AppColors.primaryLightColor,
+                      ),
                     ),
                   ),
                 ],

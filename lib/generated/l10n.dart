@@ -341,20 +341,20 @@ class S {
   }
 
   /// `Error`
-  String get signupErrorTitle {
+  String get errorTitle {
     return Intl.message(
       'Error',
-      name: 'signupErrorTitle',
+      name: 'errorTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Success`
-  String get signupSuccessTitle {
+  String get successTitle {
     return Intl.message(
       'Success',
-      name: 'signupSuccessTitle',
+      name: 'successTitle',
       desc: '',
       args: [],
     );
@@ -485,6 +485,76 @@ class S {
     return Intl.message(
       'Account created successfully.',
       name: 'authSignupSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get passwordAppBar {
+    return Intl.message(
+      'Change Password',
+      name: 'passwordAppBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry, just type your registered email and we will send you the verification code.`
+  String get passwordViewBody {
+    return Intl.message(
+      'Don\'t worry, just type your registered email and we will send you the verification code.',
+      name: 'passwordViewBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Verification Code`
+  String get passwordButton {
+    return Intl.message(
+      'Send Verification Code',
+      name: 'passwordButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A password reset link was sent to you. Please check your email for the change link.`
+  String get passwordSendLink {
+    return Intl.message(
+      'A password reset link was sent to you. Please check your email for the change link.',
+      name: 'passwordSendLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while changing your password. Try again.`
+  String get passwordError {
+    return Intl.message(
+      'An error occurred while changing your password. Try again.',
+      name: 'passwordError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email provided does not exist in our records. Please check your email and try again.`
+  String get passwordEmaildoesntexist {
+    return Intl.message(
+      'The email provided does not exist in our records. Please check your email and try again.',
+      name: 'passwordEmaildoesntexist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There was an error changing the password. Try again later.`
+  String get passwordErrorReset {
+    return Intl.message(
+      'There was an error changing the password. Try again later.',
+      name: 'passwordErrorReset',
       desc: '',
       args: [],
     );

@@ -28,8 +28,8 @@
 "signupHaveAccount1": "Already have an account?",
 "signupHaveAccount2": "Sign in",
 "signupFieldRequired": "This field is required",
-"signupErrorTitle": "Error",
-"signupSuccessTitle": "Success",
+"errorTitle": "Error",
+"successTitle": "Success",
 "signupErrorTerms": "Please accept our Terms and Conditions",
 "authErrorSignInvalidEmail": "The email address provided is invalid.",
 "authErrorWeakPassword": "The password provided is too weak.",
@@ -42,5 +42,13 @@
 "authErrorSigningIn": "Error signing in. Try again.",
 "authErrorSignOut": "An error occurred while signing out.",
 "authErrorUnexpected": "An unexpected error occurred. Please try again.",
-"authSignupSuccess": "Account created successfully."
+"authSignupSuccess": "Account created successfully.",
+
+"passwordAppBar": "Change Password",
+"passwordViewBody": "Don't worry, just type your registered email and we will send you the verification code.",
+"passwordButton": "Send Verification Code",
+"passwordSendLink": "A password reset link was sent to you. Please check your email for the change link.",
+"passwordError": "An error occurred while changing your password. Try again.",
+"passwordEmaildoesntexist": "The email provided does not exist in our records. Please check your email and try again.",
+"passwordErrorReset": "There was an error changing the password. Try again later."
 }

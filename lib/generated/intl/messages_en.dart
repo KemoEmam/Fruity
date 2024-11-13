@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "The password provided is too weak."),
         "authSignupSuccess": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
+        "errorTitle": MessageLookupByLibrary.simpleMessage("Error"),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("Login"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -73,6 +74,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
         "onboardingButton": MessageLookupByLibrary.simpleMessage("Get Started"),
         "onboardingSkip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "passwordAppBar":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
+        "passwordButton":
+            MessageLookupByLibrary.simpleMessage("Send Verification Code"),
+        "passwordEmaildoesntexist": MessageLookupByLibrary.simpleMessage(
+            "The email provided does not exist in our records. Please check your email and try again."),
+        "passwordError": MessageLookupByLibrary.simpleMessage(
+            "An error occurred while changing your password. Try again."),
+        "passwordErrorReset": MessageLookupByLibrary.simpleMessage(
+            "There was an error changing the password. Try again later."),
+        "passwordSendLink": MessageLookupByLibrary.simpleMessage(
+            "A password reset link was sent to you. Please check your email for the change link."),
+        "passwordViewBody": MessageLookupByLibrary.simpleMessage(
+            "Don\'t worry, just type your registered email and we will send you the verification code."),
         "signupAppBar": MessageLookupByLibrary.simpleMessage("New Account"),
         "signupButton":
             MessageLookupByLibrary.simpleMessage("Create a New Account"),
@@ -81,7 +96,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "There was an error creating the account. Please try again."),
         "signupErrorTerms": MessageLookupByLibrary.simpleMessage(
             "Please accept our Terms and Conditions"),
-        "signupErrorTitle": MessageLookupByLibrary.simpleMessage("Error"),
         "signupFieldRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "signupHaveAccount1":
@@ -89,10 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupHaveAccount2": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signupName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "signupPassword": MessageLookupByLibrary.simpleMessage("Password"),
-        "signupSuccessTitle": MessageLookupByLibrary.simpleMessage("Success"),
         "signupTerms1": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to the "),
         "signupTerms2":
-            MessageLookupByLibrary.simpleMessage("Our Terms and Conditions")
+            MessageLookupByLibrary.simpleMessage("Our Terms and Conditions"),
+        "successTitle": MessageLookupByLibrary.simpleMessage("Success")
       };
 }

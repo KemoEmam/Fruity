@@ -20,7 +20,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
         if (state is SigninFailure) {
           showSnackBar(
             context: context,
-            title: S.of(context).signupErrorTitle,
+            title: S.of(context).errorTitle,
             message: state.message,
             backgroundColor: Colors.red,
             icon: Icons.error,

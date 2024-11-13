@@ -96,7 +96,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
             .createUserWithEmailAndPassword(email, password, name);
       } else {
         showSnackBar(
-          title: S.of(context).signupErrorTitle,
+          title: S.of(context).errorTitle,
           backgroundColor: Colors.redAccent,
           context: context,
           message: S.of(context).signupErrorTerms,

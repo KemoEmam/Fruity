@@ -21,11 +21,11 @@ abstract class AuthRepo {
 
   Future<void> deleteUser(User? user);
 
-  // Future<void> addUserData({required UserEntity user});
+  Future<void> addUserData({required UserEntity user});
 
-  //getUserData
-  // Future<UserEntity> getUserData({required String uId});
+  // getUserData
+  Future<UserEntity> getUserData({required String uId});
 
-  //checkIfDataExists
-  // Future<bool> checkIfUserExists({required String path, required String docId});
+  // checkIfDataExists
+  Future<bool> checkIfUserExists({required String path, required String docId});
 }

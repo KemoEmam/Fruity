@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:fruity/features/auth/presentation/views/password_view.dart';
 import 'package:fruity/features/auth/presentation/views/signin_view.dart';
 import 'package:fruity/features/auth/presentation/views/signup_view.dart';
+import 'package:fruity/features/home/presentation/views/home_view.dart';
 import 'package:fruity/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
 
@@ -19,6 +20,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const PasswordView());
     case SignupView.routeName:
       return MaterialPageRoute(builder: (_) => const SignupView());
+    case HomeView.routeName:
+      return MaterialPageRoute(builder: (_) => const HomeView());
     default:
       return MaterialPageRoute(builder: (_) => const Scaffold());
   }

@@ -4,6 +4,7 @@ import 'package:fruity/core/components/custom_progress_hud.dart';
 import 'package:fruity/core/components/show_snack_bar.dart';
 import 'package:fruity/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/signin_view_body.dart';
+import 'package:fruity/features/home/presentation/views/home_view.dart';
 import 'package:fruity/generated/l10n.dart';
 
 class SigninViewBodyBlocConsumer extends StatelessWidget {
@@ -15,7 +16,9 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
-        if (state is SigninSuccess) {}
+        if (state is SigninSuccess) {
+          Navigator.of(context).pushReplacementNamed(HomeView.routeName);
+        }
 
         if (state is SigninFailure) {
           showSnackBar(

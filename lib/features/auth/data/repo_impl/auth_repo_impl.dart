@@ -27,13 +27,14 @@ class AuthRepoImpl implements AuthRepo {
           email: email, password: password);
       // var userEntity = UserModel.fromFirebaseUser(user);
       var userEntity = UserEntity(name: name, email: email, uId: user.uid);
-      addUserData(user: userEntity);
+      await addUserData(user: userEntity);
+
       return right(userEntity);
     } on CustomExceptions catch (e) {
       await deleteUser(user);
       return left(ServerFailure(message: e.message));
     } catch (e) {
-      deleteUser(user);
+      await deleteUser(user);
       logger.w('Exception in AuthRepoImpl.createUserWithEmailAndPassword: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
@@ -46,6 +47,7 @@ class AuthRepoImpl implements AuthRepo {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
       var userEntity = await getUserData(uId: user.uid);
+
       return right(userEntity);
     } on CustomExceptions catch (e) {
       return left(ServerFailure(message: e.message));
@@ -66,12 +68,12 @@ class AuthRepoImpl implements AuthRepo {
       if (isUserExists) {
         await getUserData(uId: user.uid);
       } else {
-        addUserData(user: userEntity);
+        await addUserData(user: userEntity);
       }
 
       return right(userEntity);
     } catch (e) {
-      deleteUser(user);
+      await deleteUser(user);
       logger.w('Exception in AuthRepoImpl.signInWithGoogle: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
@@ -88,12 +90,12 @@ class AuthRepoImpl implements AuthRepo {
       if (isUserExists) {
         await getUserData(uId: user.uid);
       } else {
-        addUserData(user: userEntity);
+        await addUserData(user: userEntity);
       }
 
       return right(userEntity);
     } catch (e) {
-      deleteUser(user);
+      await deleteUser(user);
       logger.w('Exception in AuthRepoImpl.signInWithFacebook: $e');
       return left(ServerFailure(message: S.current.authErrorUnexpected));
     }
@@ -134,6 +136,7 @@ class AuthRepoImpl implements AuthRepo {
   }
 
 //CRUD operations
+  @override
   Future<void> addUserData({required UserEntity user}) async {
     await databaseService.addData(
       path: BackendEndpoints.addUserData,
@@ -142,6 +145,7 @@ class AuthRepoImpl implements AuthRepo {
     );
   }
 
+  @override
   Future<UserEntity> getUserData({required String uId}) async {
     var data = await databaseService.getData(
       path: BackendEndpoints.getUserData,
@@ -150,6 +154,7 @@ class AuthRepoImpl implements AuthRepo {
     return UserModel.fromMap(data);
   }
 
+  @override
   Future<bool> checkIfUserExists(
       {required String path, required String docId}) async {
     return await databaseService.checkIfDataExists(path: path, docId: docId);

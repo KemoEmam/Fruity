@@ -98,7 +98,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               SocialSigninButton(
                 title: S.of(context).loginSignGoogle,
                 image: SvgPicture.asset(
-                  Assets.imagesGoogleLogo,
+                  AppImages.imagesGoogleLogo,
                 ),
                 onPressed: () {
                   context.read<SigninCubit>().signInWithGoogle();
@@ -108,7 +108,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               SocialSigninButton(
                 title: S.of(context).loginSignApple,
                 image: SvgPicture.asset(
-                  Assets.imagesAppleLogo,
+                  AppImages.imagesAppleLogo,
                 ),
                 onPressed: () {
                   context.read<SigninCubit>().signInWithApple();
@@ -118,7 +118,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               SocialSigninButton(
                 title: S.of(context).loginSignFacebook,
                 image: SvgPicture.asset(
-                  Assets.imagesFacebookLogo,
+                  AppImages.imagesFacebookLogo,
                 ),
                 onPressed: () {
                   context.read<SigninCubit>().signInWithFacebook();

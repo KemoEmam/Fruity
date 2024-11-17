@@ -149,5 +149,6 @@ flutter_assets:
   output_path: lib/core/utils/
   filename: app_images.dart
   field_prefix: null
+  classname: AppImages
 flutter_intl:
   enabled: true

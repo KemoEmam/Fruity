@@ -17,8 +17,8 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           isVisible: true,
           positionedRight: 18,
-          backgroundImage: Assets.imagesOnBoarding1Background,
-          image: Assets.imagesOnBoarding1Fruit,
+          backgroundImage: AppImages.imagesOnBoarding1Background,
+          image: AppImages.imagesOnBoarding1Fruit,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -50,8 +50,8 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           isVisible: false,
           positionedRight: -4,
-          backgroundImage: Assets.imagesOnBoarding2Background,
-          image: Assets.imagesOnBoarding2Fruit,
+          backgroundImage: AppImages.imagesOnBoarding2Background,
+          image: AppImages.imagesOnBoarding2Fruit,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

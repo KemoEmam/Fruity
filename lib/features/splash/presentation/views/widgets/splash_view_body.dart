@@ -31,20 +31,20 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             DirectionalWidget(
               mirror: true,
               child: SvgPicture.asset(
-                Assets.imagesPlant,
+                AppImages.imagesPlant,
               ),
             ),
           ],
         ),
         Center(
           child: SvgPicture.asset(
-            Assets.imagesLogo,
+            AppImages.imagesLogo,
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 6.0),
           child: SvgPicture.asset(
-            Assets.imagesBottomBubbles,
+            AppImages.imagesBottomBubbles,
             fit: BoxFit.fill,
           ),
         ),

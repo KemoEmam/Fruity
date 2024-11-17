@@ -7,6 +7,7 @@ import 'package:fruity/core/services/custom_bloc_observer.dart';
 import 'package:fruity/core/services/service_locator.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
+import 'package:fruity/features/home/presentation/views/home_view.dart';
 import 'package:fruity/features/splash/presentation/views/splash_view.dart';
 import 'package:fruity/firebase_options.dart';
 import 'package:fruity/generated/l10n.dart';
@@ -44,7 +45,7 @@ class Fruity extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
+      initialRoute: HomeView.routeName,
     );
   }
 }

@@ -18,6 +18,7 @@ class CustomTextFormField extends StatelessWidget {
   final Color borderColor;
   final Color focusedBorderColor;
   final Color enabledBorderColor;
+  final double borderWidth;
   const CustomTextFormField({
     super.key,
     // required this.labelText,
@@ -35,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
     this.prefixIconColor,
     this.suffixIconColor,
     this.onSaved,
+    this.borderWidth = 1.1,
   });
 
   @override
@@ -68,9 +70,9 @@ class CustomTextFormField extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder _borderBuilder(Color color, {double width = 1.1}) {
+  OutlineInputBorder _borderBuilder(Color color) {
     return OutlineInputBorder(
-      borderSide: BorderSide(color: color, width: width),
+      borderSide: BorderSide(color: color, width: borderWidth),
     );
   }
 }

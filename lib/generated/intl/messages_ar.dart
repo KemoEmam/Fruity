@@ -47,6 +47,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "authSignupSuccess":
             MessageLookupByLibrary.simpleMessage("تم انشاء الحساب بنجاح."),
         "errorTitle": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "homeAppBarSubtitle":
+            MessageLookupByLibrary.simpleMessage("أحمد مصطفي"),
+        "homeAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+        "homeFeaturedButton": MessageLookupByLibrary.simpleMessage("تسوق الان"),
+        "homeFeaturedTitle": MessageLookupByLibrary.simpleMessage("عروض العيد"),
+        "homeFeauredSubtitle": MessageLookupByLibrary.simpleMessage("خصم 25%"),
+        "homeSearchField":
+            MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),

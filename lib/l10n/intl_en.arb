@@ -50,5 +50,13 @@
 "passwordSendLink": "A password reset link was sent to you. Please check your email for the change link.",
 "passwordError": "An error occurred while changing your password. Try again.",
 "passwordEmaildoesntexist": "The email provided does not exist in our records. Please check your email and try again.",
-"passwordErrorReset": "There was an error changing the password. Try again later."
+"passwordErrorReset": "There was an error changing the password. Try again later.",
+
+
+"homeAppBarTitle": "Good Morning!..",
+"homeAppBarSubtitle": "Ahmed Mustafa",
+"homeSearchField": "Search for.....",
+"homeFeaturedTitle": "Eid Offers",
+"homeFeauredSubtitle": "25% Discount",
+"homeFeaturedButton": "Shop Now"
 }

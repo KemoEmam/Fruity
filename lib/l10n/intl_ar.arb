@@ -54,5 +54,13 @@
 "passwordSendLink": "تم إرسال رابط إعادة تعيين كلمة المرور إليك. يرجى التحقق من بريدك الإلكتروني للحصول على رابط التغيير.",
 "passwordError": "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى.",
 "passwordEmaildoesntexist": "البريد الإلكتروني المقدم غير موجود في سجلاتنا. يرجى التحقق من بريدك الإلكتروني والمحاولة مرة أخرى.",
-"passwordErrorReset": "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى."
+"passwordErrorReset": "حدث خطاء في تغيير كلمة المرور. حاول مرة اخرى.",
+
+
+"homeAppBarTitle": "صباح الخير !..",
+"homeAppBarSubtitle": "أحمد مصطفي",
+"homeSearchField": "ابحث عن.......",
+"homeFeaturedTitle": "عروض العيد",
+"homeFeauredSubtitle": "خصم 25%",
+"homeFeaturedButton": "تسوق الان"
 }

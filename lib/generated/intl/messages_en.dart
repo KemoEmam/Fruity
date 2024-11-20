@@ -47,6 +47,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "authSignupSuccess": MessageLookupByLibrary.simpleMessage(
             "Account created successfully."),
         "errorTitle": MessageLookupByLibrary.simpleMessage("Error"),
+        "homeAppBarSubtitle":
+            MessageLookupByLibrary.simpleMessage("Ahmed Mustafa"),
+        "homeAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("Good Morning!.."),
+        "homeFeaturedButton": MessageLookupByLibrary.simpleMessage("Shop Now"),
+        "homeFeaturedTitle": MessageLookupByLibrary.simpleMessage("Eid Offers"),
+        "homeFeauredSubtitle":
+            MessageLookupByLibrary.simpleMessage("25% Discount"),
+        "homeSearchField":
+            MessageLookupByLibrary.simpleMessage("Search for....."),
         "loginAppBar": MessageLookupByLibrary.simpleMessage("Login"),
         "loginCreateAccount1":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),

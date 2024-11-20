@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/constants.dart';
-import 'package:fruity/core/components/directional_widget.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/features/auth/presentation/views/signin_view.dart';
@@ -28,11 +27,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         Row(
           children: [
-            DirectionalWidget(
-              mirror: true,
-              child: SvgPicture.asset(
-                AppImages.imagesPlant,
-              ),
+            SvgPicture.asset(
+              AppImages.imagesPlant,
             ),
           ],
         ),

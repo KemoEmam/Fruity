@@ -559,6 +559,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Good Morning!..`
+  String get homeAppBarTitle {
+    return Intl.message(
+      'Good Morning!..',
+      name: 'homeAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ahmed Mustafa`
+  String get homeAppBarSubtitle {
+    return Intl.message(
+      'Ahmed Mustafa',
+      name: 'homeAppBarSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for.....`
+  String get homeSearchField {
+    return Intl.message(
+      'Search for.....',
+      name: 'homeSearchField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eid Offers`
+  String get homeFeaturedTitle {
+    return Intl.message(
+      'Eid Offers',
+      name: 'homeFeaturedTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `25% Discount`
+  String get homeFeauredSubtitle {
+    return Intl.message(
+      '25% Discount',
+      name: 'homeFeauredSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Now`
+  String get homeFeaturedButton {
+    return Intl.message(
+      'Shop Now',
+      name: 'homeFeaturedButton',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

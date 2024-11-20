@@ -14,6 +14,14 @@ class AppImages {
   /// assets/images/bottom_bubbles.svg
   static const String imagesBottomBubbles = "assets/images/bottom_bubbles.svg";
 
+  /// Assets for imagesDiscount
+  /// assets/images/discount.png
+  static const String imagesDiscount = "assets/images/discount.png";
+
+  /// Assets for imagesDiscountLTR
+  /// assets/images/discountLTR.png
+  static const String imagesDiscountLTR = "assets/images/discountLTR.png";
+
   /// Assets for imagesFacebookLogo
   /// assets/images/facebook_logo.svg
   static const String imagesFacebookLogo = "assets/images/facebook_logo.svg";
@@ -22,21 +30,13 @@ class AppImages {
   /// assets/images/google_logo.svg
   static const String imagesGoogleLogo = "assets/images/google_logo.svg";
 
-  /// Assets for imagesHomeListviewDiscount
-  /// assets/images/home_listview_discount.svg
-  static const String imagesHomeListviewDiscount = "assets/images/home_listview_discount.svg";
-
-  /// Assets for imagesHomeListviewItem1
-  /// assets/images/home_listview_item1.svg
-  static const String imagesHomeListviewItem1 = "assets/images/home_listview_item1.svg";
+  /// Assets for imagesHomeListviewItem
+  /// assets/images/home_listview_item.png
+  static const String imagesHomeListviewItem = "assets/images/home_listview_item.png";
 
   /// Assets for imagesHomeListviewItem2
   /// assets/images/home_listview_item2.svg
   static const String imagesHomeListviewItem2 = "assets/images/home_listview_item2.svg";
-
-  /// Assets for imagesHomeListviewTest1
-  /// assets/images/home_listview_test1.svg
-  static const String imagesHomeListviewTest1 = "assets/images/home_listview_test1.svg";
 
   /// Assets for imagesIcon
   /// assets/images/icon.png

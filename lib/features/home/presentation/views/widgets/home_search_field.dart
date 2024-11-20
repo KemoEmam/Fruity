@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/custom_search_field.dart';
 import 'package:fruity/core/utils/app_images.dart';
+import 'package:fruity/generated/l10n.dart';
 
 class HomeSearchField extends StatelessWidget {
   const HomeSearchField({super.key});
@@ -28,7 +29,7 @@ class HomeSearchField extends StatelessWidget {
           replaceSuffixWithClearIcon: true,
           borderWidth: 0,
           borderColor: Colors.transparent,
-          hintText: 'ابحث عن.......',
+          hintText: S.of(context).homeSearchField,
           prefixIcon: Padding(
             padding: const EdgeInsets.only(left: 15, right: 8),
             child: SvgPicture.asset(AppImages.imagesSearchHome),

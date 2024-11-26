@@ -58,6 +58,7 @@ dependencies:
   logger: ^2.4.0
   meta: ^1.15.0
   modal_progress_hud_nsn: ^0.5.1
+  persistent_bottom_nav_bar: ^6.2.1
   rename: ^3.0.2
   shared_preferences: ^2.3.2
   sign_in_with_apple: ^6.1.3

@@ -431,7 +431,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "15a2f5a15603046e11bfd3c5cf3c25ae0f975c33"
+      resolved-ref: "9d933c1d836118e88ea8fef7e5139575877f410f"
       url: "https://github.com/KemoEmam/ForbiddenPack.git"
     source: git
     version: "0.0.1"
@@ -715,6 +715,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.0"
+  persistent_bottom_nav_bar:
+    dependency: "direct main"
+    description:
+      name: persistent_bottom_nav_bar
+      sha256: "6aa9b97ced1abd92c90cedd1997d34ea0b35c3ded762ac6063baccc299b0c4c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.1"
   petitparser:
     dependency: transitive
     description:

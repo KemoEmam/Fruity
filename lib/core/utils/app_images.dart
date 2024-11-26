@@ -26,9 +26,21 @@ class AppImages {
   /// assets/images/facebook_logo.svg
   static const String imagesFacebookLogo = "assets/images/facebook_logo.svg";
 
+  /// Assets for imagesFruitMellon
+  /// assets/images/fruit_mellon.png
+  static const String imagesFruitMellon = "assets/images/fruit_mellon.png";
+
   /// Assets for imagesGoogleLogo
   /// assets/images/google_logo.svg
   static const String imagesGoogleLogo = "assets/images/google_logo.svg";
+
+  /// Assets for imagesHomeActive
+  /// assets/images/homeActive.svg
+  static const String imagesHomeActive = "assets/images/homeActive.svg";
+
+  /// Assets for imagesHomeIcon
+  /// assets/images/homeIcon.svg
+  static const String imagesHomeIcon = "assets/images/homeIcon.svg";
 
   /// Assets for imagesHomeListviewItem
   /// assets/images/home_listview_item.png
@@ -74,8 +86,32 @@ class AppImages {
   /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
 
+  /// Assets for imagesProductsActive
+  /// assets/images/productsActive.svg
+  static const String imagesProductsActive = "assets/images/productsActive.svg";
+
+  /// Assets for imagesProductsIcon
+  /// assets/images/productsIcon.svg
+  static const String imagesProductsIcon = "assets/images/productsIcon.svg";
+
+  /// Assets for imagesProfile
+  /// assets/images/profile.svg
+  static const String imagesProfile = "assets/images/profile.svg";
+
+  /// Assets for imagesProfileActive
+  /// assets/images/profileActive.svg
+  static const String imagesProfileActive = "assets/images/profileActive.svg";
+
   /// Assets for imagesSearchHome
   /// assets/images/search_home.svg
   static const String imagesSearchHome = "assets/images/search_home.svg";
+
+  /// Assets for imagesShoppingCart
+  /// assets/images/shopping-cart.svg
+  static const String imagesShoppingCart = "assets/images/shopping-cart.svg";
+
+  /// Assets for imagesShoppingCartActive
+  /// assets/images/shoppingCartActive.svg
+  static const String imagesShoppingCartActive = "assets/images/shoppingCartActive.svg";
 }
 

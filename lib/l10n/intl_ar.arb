@@ -62,5 +62,13 @@
 "homeSearchField": "ابحث عن.......",
 "homeFeaturedTitle": "عروض العيد",
 "homeFeauredSubtitle": "خصم 25%",
-"homeFeaturedButton": "تسوق الان"
+"homeFeaturedButton": "تسوق الان",
+"homeBestSellersTitle": "الأكثر مبيعًا",
+"homeBestSellersMore": "المزيد",
+
+
+"navBarHome":  "الرئيسية",
+"navBarProducts": "المنتجات",
+"navBarCart": "سلة التسوق", 
+"navBarProfile":  "حسابي"
 }

@@ -58,5 +58,12 @@
 "homeSearchField": "Search for.....",
 "homeFeaturedTitle": "Eid Offers",
 "homeFeauredSubtitle": "25% Discount",
-"homeFeaturedButton": "Shop Now"
+"homeFeaturedButton": "Shop Now",
+"homeBestSellersTitle": "Best Sellers",
+"homeBestSellersMore": "More",
+
+"navBarHome": "Home",
+"navBarProducts": "Products",
+"navBarCart": "Cart",
+"navBarProfile": "Profile"
 }

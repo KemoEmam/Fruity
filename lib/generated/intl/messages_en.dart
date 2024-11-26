@@ -51,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ahmed Mustafa"),
         "homeAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Good Morning!.."),
+        "homeBestSellersMore": MessageLookupByLibrary.simpleMessage("More"),
+        "homeBestSellersTitle":
+            MessageLookupByLibrary.simpleMessage("Best Sellers"),
         "homeFeaturedButton": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "homeFeaturedTitle": MessageLookupByLibrary.simpleMessage("Eid Offers"),
         "homeFeauredSubtitle":
@@ -73,6 +76,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign up with Facebook"),
         "loginSignGoogle":
             MessageLookupByLibrary.simpleMessage("Sign up with Google"),
+        "navBarCart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "navBarHome": MessageLookupByLibrary.simpleMessage("Home"),
+        "navBarProducts": MessageLookupByLibrary.simpleMessage("Products"),
+        "navBarProfile": MessageLookupByLibrary.simpleMessage("Profile"),
         "onboarding1Subtitle": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and get the best deals and high quality"),
         "onboarding1Title1": MessageLookupByLibrary.simpleMessage("Welcome to"),

@@ -619,6 +619,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Best Sellers`
+  String get homeBestSellersTitle {
+    return Intl.message(
+      'Best Sellers',
+      name: 'homeBestSellersTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get homeBestSellersMore {
+    return Intl.message(
+      'More',
+      name: 'homeBestSellersMore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get navBarHome {
+    return Intl.message(
+      'Home',
+      name: 'navBarHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get navBarProducts {
+    return Intl.message(
+      'Products',
+      name: 'navBarProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get navBarCart {
+    return Intl.message(
+      'Cart',
+      name: 'navBarCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get navBarProfile {
+    return Intl.message(
+      'Profile',
+      name: 'navBarProfile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

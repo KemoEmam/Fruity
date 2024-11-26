@@ -53,6 +53,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w600,
     fontSize: 13,
   );
+  static const TextStyle cairoSemiBold11 = TextStyle(
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w600,
+    fontSize: 11,
+  );
 
   static const TextStyle cairoSemiBold16 = TextStyle(
     fontFamily: 'Cairo',

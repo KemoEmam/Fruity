@@ -17,12 +17,23 @@ class FeaturedItem extends StatelessWidget {
         aspectRatio: 335 / 158,
         child: Stack(
           children: [
-            Image.asset(
-              AppImages.imagesHomeListviewItem,
+            Positioned(
+              top: 0,
+              bottom: 0,
+              // left: 0,
+              // right: itemWidth * 0.3,
+              child: Image.asset(
+                AppImages.imagesHomeListviewItem,
+                fit: BoxFit.fill,
+              ),
             ),
             Container(
               width: itemWidth * 0.5,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(isArabic() ? 0 : 4),
+                  bottomRight: Radius.circular(isArabic() ? 4 : 0),
+                ),
                 image: DecorationImage(
                   image: AssetImage(
                     isArabic()
@@ -34,7 +45,7 @@ class FeaturedItem extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.only(
-                    right: isArabic() ? 15 : 0, left: isArabic() ? 0 : 15),
+                    right: isArabic() ? 16 : 0, left: isArabic() ? 0 : 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

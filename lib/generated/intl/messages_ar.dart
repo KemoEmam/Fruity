@@ -51,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أحمد مصطفي"),
         "homeAppBarTitle":
             MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
+        "homeBestSellersMore": MessageLookupByLibrary.simpleMessage("المزيد"),
+        "homeBestSellersTitle":
+            MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "homeFeaturedButton": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "homeFeaturedTitle": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "homeFeauredSubtitle": MessageLookupByLibrary.simpleMessage("خصم 25%"),
@@ -72,6 +75,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "loginSignGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "navBarCart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+        "navBarHome": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "navBarProducts": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "navBarProfile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "onboarding1Subtitle": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازه واحصل على أفضل العروض والجودة العالية"),
         "onboarding1Title1":

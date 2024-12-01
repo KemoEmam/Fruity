@@ -8,13 +8,14 @@ import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
-import 'package:fruity/features/auth/presentation/views/password_view.dart';
-import 'package:fruity/features/auth/presentation/views/signup_view.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/account_action_text.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/password_field.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:fruity/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/router/routes.dart';
 
 class SigninViewBody extends StatefulWidget {
   const SigninViewBody({super.key});
@@ -58,7 +59,8 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, PasswordView.routeName);
+                      // Navigator.pushNamed(context, PasswordView.routeName);
+                      context.push(Routes.password);
                     },
                     child: Text(
                       S.of(context).loginForgotPassword,
@@ -89,7 +91,8 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 textBeforeAction: S.of(context).loginCreateAccount1,
                 actionText: S.of(context).loginCreateAccount2,
                 onTap: () {
-                  Navigator.pushNamed(context, SignupView.routeName);
+                  // Navigator.pushNamed(context, SignupView.routeName);
+                  context.push(Routes.signup);
                 },
               ),
               const SizedBox(height: 33),

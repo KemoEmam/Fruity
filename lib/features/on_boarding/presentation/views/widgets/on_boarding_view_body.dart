@@ -1,13 +1,14 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruity/constants.dart';
+import 'package:fruity/core/router/routes.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/core/components/custom_button.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
-import 'package:fruity/features/auth/presentation/views/signin_view.dart';
 import 'package:fruity/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruity/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -70,8 +71,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               textStyle: AppTextStyles.cairoBold16,
               onPressed: () {
                 SharedPrefsService.setBool(kIsOnboardingSeen, true);
-                Navigator.of(context)
-                    .pushReplacementNamed(SigninView.routeName);
+                // Navigator.of(context)
+                //     .pushReplacementNamed(SigninView.routeName);
+                context.go(Routes.signin);
               },
             ),
           ),

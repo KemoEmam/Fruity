@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruity/core/components/custom_progress_hud.dart';
+import 'package:fruity/core/router/routes.dart';
 import 'package:fruity/core/utils/app_styles/app_colors.dart';
 import 'package:fruity/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
-import 'package:fruity/features/auth/presentation/views/signin_view.dart';
 import 'package:fruity/features/auth/presentation/views/widgets/signup_view_body.dart';
 import 'package:fruity/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/components/show_snack_bar.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {
@@ -30,8 +31,8 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
               () {
                 if (context.mounted) {
                   // Add mounted check to ensure context is valid
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                      SigninView.routeName, (_) => false);
+                  //  GoRouter.of(context).pushReplacementNamed(SigninView.routeName);
+                  context.go(Routes.signin);
                 }
               },
             );

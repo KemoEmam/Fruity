@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/constants.dart';
+import 'package:fruity/core/router/routes.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_images.dart';
-import 'package:fruity/features/auth/presentation/views/signin_view.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -55,9 +56,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       () {
         if (!mounted) return;
         if (isOnBoardingSeen) {
-          Navigator.of(context).pushReplacementNamed(SigninView.routeName);
+          // Navigator.of(context).pushReplacementNamed(SigninView.routeName);
+          context.go(Routes.signin);
         } else {
-          Navigator.of(context).pushReplacementNamed(SigninView.routeName);
+          // Navigator.of(context).pushReplacementNamed(OnBoardingView.routeName);
+          context.go(Routes.onboarding);
         }
       },
     );

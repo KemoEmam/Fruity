@@ -10,7 +10,6 @@ import 'package:fruity/generated/l10n.dart';
 class SigninView extends StatelessWidget {
   const SigninView({super.key});
 
-  static const String routeName = 'signin';
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

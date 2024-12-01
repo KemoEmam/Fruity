@@ -4,7 +4,6 @@ import 'package:fruity/features/on_boarding/presentation/views/widgets/on_boardi
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
 
-  static const String routeName = 'onBoarding';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

@@ -4,9 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/custom_text_button.dart';
 import 'package:fruity/core/components/directional_widget.dart';
+import 'package:fruity/core/router/routes.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
-import 'package:fruity/features/auth/presentation/views/signin_view.dart';
 import 'package:fruity/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/services/shared_prefs_service.dart';
 
@@ -59,8 +60,9 @@ class PageViewItem extends StatelessWidget {
                     textColor: const Color(0xFF949D9E),
                     onPressed: () {
                       SharedPrefsService.setBool(kIsOnboardingSeen, true);
-                      Navigator.of(context)
-                          .pushReplacementNamed(SigninView.routeName);
+                      // Navigator.of(context)
+                      //     .pushReplacementNamed(SigninView.routeName);
+                      context.go(Routes.signin);
                     },
                   ),
                 ),

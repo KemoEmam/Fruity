@@ -22,6 +22,8 @@ abstract class AuthRepo {
   Future<void> deleteUser(User? user);
 
   Future<void> addUserData({required UserEntity user});
+//save user data locally
+  Future<UserEntity> saveUserData({required UserEntity user});
 
   // getUserData
   Future<UserEntity> getUserData({required String uId});

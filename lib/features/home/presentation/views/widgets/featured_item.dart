@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruity/core/helper/functions/functions.dart';
+import 'package:fruity/core/helper/functions.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/home/presentation/views/widgets/featured_button.dart';

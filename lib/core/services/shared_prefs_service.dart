@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPrefsService {
+class PrefsService {
   static late SharedPreferences _prefs;
 
   static Future<void> init() async {
@@ -13,5 +13,13 @@ class SharedPrefsService {
 
   static getBool(String key) {
     return _prefs.getBool(key) ?? false;
+  }
+
+  static setString(String key, String value) async {
+    await _prefs.setString(key, value);
+  }
+
+  static getString(String key) {
+    return _prefs.getString(key);
   }
 }

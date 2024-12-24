@@ -70,7 +70,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               text: S.current.onboardingButton,
               textStyle: AppTextStyles.cairoBold16,
               onPressed: () {
-                SharedPrefsService.setBool(kIsOnboardingSeen, true);
+                PrefsService.setBool(kIsOnboardingSeen, true);
                 // Navigator.of(context)
                 //     .pushReplacementNamed(SigninView.routeName);
                 context.go(Routes.signin);

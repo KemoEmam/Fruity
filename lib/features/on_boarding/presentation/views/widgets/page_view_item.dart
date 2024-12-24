@@ -59,7 +59,7 @@ class PageViewItem extends StatelessWidget {
                     textStyle: AppTextStyles.cairoRegular13,
                     textColor: const Color(0xFF949D9E),
                     onPressed: () {
-                      SharedPrefsService.setBool(kIsOnboardingSeen, true);
+                      PrefsService.setBool(kIsOnboardingSeen, true);
                       // Navigator.of(context)
                       //     .pushReplacementNamed(SigninView.routeName);
                       context.go(Routes.signin);

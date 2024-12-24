@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruity/constants.dart';
+import 'package:fruity/core/helper/functions.dart';
 import 'package:fruity/core/router/routes.dart';
+import 'package:fruity/core/services/firebase_auth_service.dart';
 import 'package:fruity/core/services/shared_prefs_service.dart';
 import 'package:fruity/core/utils/app_images.dart';
 import 'package:go_router/go_router.dart';
@@ -27,6 +29,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Row(
+          mainAxisAlignment:
+              isArabic() ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [
             SvgPicture.asset(
               AppImages.imagesPlant,
@@ -50,16 +54,20 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void executeNavigation() {
-    bool isOnBoardingSeen = SharedPrefsService.getBool(kIsOnboardingSeen);
+    bool isOnBoardingSeen = PrefsService.getBool(kIsOnboardingSeen);
     Future.delayed(
       const Duration(seconds: 3),
       () {
         if (!mounted) return;
         if (isOnBoardingSeen) {
-          // Navigator.of(context).pushReplacementNamed(SigninView.routeName);
-          context.go(Routes.signin);
+          // Check if user is signed in
+          var isSignedIn = FirebaseAuthService().isLoggedIn();
+          if (isSignedIn) {
+            context.go(Routes.home);
+          } else {
+            context.go(Routes.signin);
+          }
         } else {
-          // Navigator.of(context).pushReplacementNamed(OnBoardingView.routeName);
           context.go(Routes.onboarding);
         }
       },

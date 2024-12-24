@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruity/constants.dart';
 import 'package:fruity/core/components/custom_text_button.dart';
-import 'package:fruity/core/helper/functions/functions.dart';
+import 'package:fruity/core/helper/functions.dart';
 import 'package:fruity/core/utils/app_styles/app_text_styles.dart';
 import 'package:fruity/features/best_selling/presentation/views/best_selling_view.dart';
 import 'package:fruity/generated/l10n.dart';

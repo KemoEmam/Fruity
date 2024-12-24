@@ -191,6 +191,10 @@ class FirebaseAuthService {
         .user!;
   }
 
+  bool isLoggedIn() {
+    return _firebaseAuth.currentUser != null;
+  }
+
   // Centralized method for error handling using AuthAction enum
   CustomExceptions _mapFirebaseAuthException(
       FirebaseAuthException e, AuthAction action) {

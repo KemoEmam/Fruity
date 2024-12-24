@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruity/core/helper/functions/functions.dart';
+import 'package:fruity/core/helper/functions.dart';
 import 'package:fruity/core/layout/destination_entity.dart';
 import 'package:go_router/go_router.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';

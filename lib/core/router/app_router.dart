@@ -17,7 +17,7 @@ import 'package:go_router/go_router.dart';
 final rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: '_root');
 
 final router = GoRouter(
-  initialLocation: Routes.home,
+  initialLocation: Routes.splash,
   navigatorKey: rootNavigatorKey,
   errorBuilder: (context, state) {
     return Scaffold(

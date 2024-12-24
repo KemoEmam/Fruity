@@ -15,7 +15,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await SharedPrefsService.init();
+  await PrefsService.init();
   serviceLocator();
   Bloc.observer = CustomBlocObserver();
   runApp(const Fruity());

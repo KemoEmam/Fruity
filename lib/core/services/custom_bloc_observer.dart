@@ -4,6 +4,8 @@ import 'package:logger/logger.dart';
 
 class CustomBlocObserver extends BlocObserver {
   final logger = getIt<Logger>();
+  //  getIt.registerLazySingleton<Logger>(() => Logger());
+  //  Bloc.observer = CustomBlocObserver(); in the main file
   @override
   void onTransition(Bloc bloc, Transition transition) {
     logger.i(

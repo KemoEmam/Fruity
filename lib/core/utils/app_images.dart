@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   AppImages._();
-  
+
   /// Assets for imagesAppleLogo
   /// assets/images/apple_logo.svg
   static const String imagesAppleLogo = "assets/images/apple_logo.svg";
@@ -44,11 +44,13 @@ class AppImages {
 
   /// Assets for imagesHomeListviewItem
   /// assets/images/home_listview_item.png
-  static const String imagesHomeListviewItem = "assets/images/home_listview_item.png";
+  static const String imagesHomeListviewItem =
+      "assets/images/home_listview_item.png";
 
   /// Assets for imagesHomeListviewItem2
   /// assets/images/home_listview_item2.svg
-  static const String imagesHomeListviewItem2 = "assets/images/home_listview_item2.svg";
+  static const String imagesHomeListviewItem2 =
+      "assets/images/home_listview_item2.svg";
 
   /// Assets for imagesIcon
   /// assets/images/icon.png
@@ -68,19 +70,23 @@ class AppImages {
 
   /// Assets for imagesOnBoarding1Background
   /// assets/images/on_boarding1_background.svg
-  static const String imagesOnBoarding1Background = "assets/images/on_boarding1_background.svg";
+  static const String imagesOnBoarding1Background =
+      "assets/images/on_boarding1_background.svg";
 
   /// Assets for imagesOnBoarding1Fruit
   /// assets/images/on_boarding1_fruit.svg
-  static const String imagesOnBoarding1Fruit = "assets/images/on_boarding1_fruit.svg";
+  static const String imagesOnBoarding1Fruit =
+      "assets/images/on_boarding1_fruit.svg";
 
   /// Assets for imagesOnBoarding2Background
   /// assets/images/on_boarding2_background.svg
-  static const String imagesOnBoarding2Background = "assets/images/on_boarding2_background.svg";
+  static const String imagesOnBoarding2Background =
+      "assets/images/on_boarding2_background.svg";
 
   /// Assets for imagesOnBoarding2Fruit
   /// assets/images/on_boarding2_fruit.svg
-  static const String imagesOnBoarding2Fruit = "assets/images/on_boarding2_fruit.svg";
+  static const String imagesOnBoarding2Fruit =
+      "assets/images/on_boarding2_fruit.svg";
 
   /// Assets for imagesPlant
   /// assets/images/plant.svg
@@ -112,6 +118,6 @@ class AppImages {
 
   /// Assets for imagesShoppingCartActive
   /// assets/images/shoppingCartActive.svg
-  static const String imagesShoppingCartActive = "assets/images/shoppingCartActive.svg";
+  static const String imagesShoppingCartActive =
+      "assets/images/shoppingCartActive.svg";
 }
-

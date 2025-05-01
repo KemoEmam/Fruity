@@ -207,8 +207,6 @@ class FirebaseAuthService {
         return _handleResetPasswordErrors(e);
       case AuthAction.signout:
         return CustomExceptions(message: S.current.authErrorSignOut);
-      default:
-        return CustomExceptions(message: S.current.authErrorUnexpected);
     }
   }
 
